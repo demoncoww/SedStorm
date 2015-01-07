@@ -61,15 +61,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\extlibs\aurora\include;G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\include;G:\GitHub\sedimentalstorm\Source\3rdParty\Box2D\Source\Box2D_v2.3.0\Box2D;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\3rdParty\SFML\Lib-Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib</AdditionalDependencies>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
+      <AdditionalLibraryDirectories>..\3rdParty\Thor\lib-win32\Debug;..\3rdParty\Box2D\Lib-win32\Debug;..\3rdParty\SFML\Lib-Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;thor-d.lib;Box2D.lib</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,18 +79,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\extlibs\aurora\include;G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\include;G:\GitHub\sedimentalstorm\Source\3rdParty\Box2D\Source\Box2D_v2.3.0\Box2D;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\3rdParty\SFML\Lib-Win32\Release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib</AdditionalDependencies>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
+      <AdditionalLibraryDirectories>..\3rdParty\Thor\lib-win32\Release;..\3rdParty\Box2D\Lib-win32\Release;..\3rdParty\SFML\Lib-Win32\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;thor.lib;Box2D.lib</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

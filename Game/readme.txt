@@ -2,5 +2,5 @@ The Game directory should hold the release build and every game data file your g
 
 the 'data' directory holds the data needed by the executable
 
-\Game\Windows\Release hold the executable for windows and all the .dll files needed
+\Game\Windows\Release hold the executable for Windows and all the .dll files needed
 

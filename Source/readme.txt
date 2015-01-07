@@ -1,6 +1,4 @@
-The source code lives in the Source directory.
-
-The Source directory holds all the actual .cpp and .h files
+The Source directory holds all the actual .cpp and .h files for our game
 
 The VS2013 holds the Visual Studio Project files
 
