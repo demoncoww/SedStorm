@@ -223,18 +223,17 @@
 				HEADER_SEARCH_PATHS = (
 					"<Multiple",
 					"values>",
-					"$(SRCROOT)/../../Thor/Source/Thor-master-5Jan2015/include/",
-					"$(SRCROOT)/../../SFML/Source/SFML-2.2/include/",
-					/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/,
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/include",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/include/",
+					"$(SRCROOT)/../../3rdParty/SFML/Source/SFML-2.2/include/",
+					"$(SRCROOT)/../../3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include/",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/SFML/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/Box2D/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/Thor/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/SFML/Lib-osx",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
@@ -275,18 +274,17 @@
 				HEADER_SEARCH_PATHS = (
 					"<Multiple",
 					"values>",
-					"$(SRCROOT)/../../Thor/Source/Thor-master-5Jan2015/include/",
-					"$(SRCROOT)/../../SFML/Source/SFML-2.2/include/",
-					/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/,
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/include",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/include/",
+					"$(SRCROOT)/../../3rdParty/SFML/Source/SFML-2.2/include/",
+					"$(SRCROOT)/../../3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include/",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
-					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/SFML/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/Box2D/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/Thor/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/SFML/Lib-osx",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
