@@ -14,7 +14,7 @@
 // method resourcePath() from ResourcePath.hpp
 //
 
-#include <SFML/Audio.hpp>
+/*#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
 // Here is a small helper for you ! Have a look.
@@ -88,4 +88,4 @@ int main(int, char const**)
     }
 
     return EXIT_SUCCESS;
-}
+}*/

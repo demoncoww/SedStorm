@@ -13,6 +13,9 @@
 		23F9F2511A5E1143008BE462 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F2501A5E1143008BE462 /* nice_music.ogg */; };
 		23F9F2531A5E1143008BE462 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F2521A5E1143008BE462 /* sansation.ttf */; };
 		23F9F2551A5E1143008BE462 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F2541A5E1143008BE462 /* icon.png */; };
+		23F9F2691A5E26E9008BE462 /* SedimentalStorm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */; };
+		23F9F26B1A5E2811008BE462 /* libthor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F9F26A1A5E2811008BE462 /* libthor.dylib */; };
+		23F9F26F1A5E288E008BE462 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F9F26E1A5E288E008BE462 /* libBox2D.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,13 @@
 		23F9F2501A5E1143008BE462 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		23F9F2521A5E1143008BE462 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		23F9F2541A5E1143008BE462 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		23F9F25B1A5E1176008BE462 /* 3rdParty */ = {isa = PBXFileReference; lastKnownFileType = folder; name = 3rdParty; path = ../../3rdParty; sourceTree = "<group>"; };
+		23F9F25C1A5E1176008BE462 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.txt; path = ../../readme.txt; sourceTree = "<group>"; };
+		23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SedimentalStorm.cpp; sourceTree = "<group>"; };
+		23F9F2681A5E26E9008BE462 /* SedimentalStorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SedimentalStorm.h; sourceTree = "<group>"; };
+		23F9F26A1A5E2811008BE462 /* libthor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libthor.dylib; path = "../../3rdParty/Thor/Lib-osx/libthor.dylib"; sourceTree = "<group>"; };
+		23F9F26C1A5E282A008BE462 /* libBox2D.2.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libBox2D.2.3.0.dylib; path = "../../3rdParty/Box2D/Lib-osx/libBox2D.2.3.0.dylib"; sourceTree = "<group>"; };
+		23F9F26E1A5E288E008BE462 /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = "../../3rdParty/Box2D/Lib-osx/libBox2D.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F9F26B1A5E2811008BE462 /* libthor.dylib in Frameworks */,
+				23F9F26F1A5E288E008BE462 /* libBox2D.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +53,14 @@
 		23F9F2391A5E1143008BE462 = {
 			isa = PBXGroup;
 			children = (
+				23F9F26E1A5E288E008BE462 /* libBox2D.a */,
+				23F9F26C1A5E282A008BE462 /* libBox2D.2.3.0.dylib */,
+				23F9F26A1A5E2811008BE462 /* libthor.dylib */,
 				23F9F2451A5E1143008BE462 /* Sedimental Storm */,
 				23F9F2441A5E1143008BE462 /* Products */,
+				23F9F25B1A5E1176008BE462 /* 3rdParty */,
+				23F9F25C1A5E1176008BE462 /* readme.txt */,
+				23F9F2661A5E26E9008BE462 /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +101,16 @@
 				23F9F2541A5E1143008BE462 /* icon.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		23F9F2661A5E26E9008BE462 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */,
+				23F9F2681A5E26E9008BE462 /* SedimentalStorm.h */,
+			);
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F9F2691A5E26E9008BE462 /* SedimentalStorm.cpp in Sources */,
 				23F9F24C1A5E1143008BE462 /* main.cpp in Sources */,
 				23F9F2491A5E1143008BE462 /* ResourcePath.mm in Sources */,
 			);
@@ -192,12 +221,20 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include/,
-					"$(inherited)",
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../../Thor/Source/Thor-master-5Jan2015/include/",
+					"$(SRCROOT)/../../SFML/Source/SFML-2.2/include/",
+					/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/,
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/include",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/SFML/Lib-osx",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
@@ -236,12 +273,20 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include/,
-					"$(inherited)",
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../../Thor/Source/Thor-master-5Jan2015/include/",
+					"$(SRCROOT)/../../SFML/Source/SFML-2.2/include/",
+					/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/,
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/include",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/SFML/Lib-osx",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
@@ -273,6 +318,11 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Sedimental Storm/Sedimental Storm-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -282,6 +332,11 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Sedimental Storm/Sedimental Storm-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
