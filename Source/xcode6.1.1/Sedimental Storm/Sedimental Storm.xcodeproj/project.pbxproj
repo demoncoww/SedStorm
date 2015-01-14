@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23A6CE5B1A65DE1300C03B92 /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23A6CE591A65DE1300C03B92 /* Physics.cpp */; };
+		23A6CE5E1A65FB2100C03B92 /* PhysicsBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23A6CE5C1A65FB2100C03B92 /* PhysicsBody.cpp */; };
+		23A6CE611A664DF000C03B92 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23A6CE5F1A664DF000C03B92 /* GameObject.cpp */; };
+		23A6CE641A6668E600C03B92 /* GameObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23A6CE621A6668E600C03B92 /* GameObjectManager.cpp */; };
 		23F9F2491A5E1143008BE462 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23F9F2481A5E1143008BE462 /* ResourcePath.mm */; };
 		23F9F24C1A5E1143008BE462 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F9F24B1A5E1143008BE462 /* main.cpp */; };
 		23F9F24F1A5E1143008BE462 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F24E1A5E1143008BE462 /* cute_image.jpg */; };
@@ -19,6 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23A6CE591A65DE1300C03B92 /* Physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
+		23A6CE5A1A65DE1300C03B92 /* Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
+		23A6CE5C1A65FB2100C03B92 /* PhysicsBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsBody.cpp; sourceTree = "<group>"; };
+		23A6CE5D1A65FB2100C03B92 /* PhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsBody.h; sourceTree = "<group>"; };
+		23A6CE5F1A664DF000C03B92 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		23A6CE601A664DF000C03B92 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		23A6CE621A6668E600C03B92 /* GameObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObjectManager.cpp; sourceTree = "<group>"; };
+		23A6CE631A6668E600C03B92 /* GameObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObjectManager.h; sourceTree = "<group>"; };
 		23F9F2431A5E1143008BE462 /* Sedimental Storm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sedimental Storm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F9F2471A5E1143008BE462 /* Sedimental Storm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sedimental Storm-Info.plist"; sourceTree = "<group>"; };
 		23F9F2481A5E1143008BE462 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -106,8 +118,16 @@
 		23F9F2661A5E26E9008BE462 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				23A6CE591A65DE1300C03B92 /* Physics.cpp */,
+				23A6CE5A1A65DE1300C03B92 /* Physics.h */,
 				23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */,
 				23F9F2681A5E26E9008BE462 /* SedimentalStorm.h */,
+				23A6CE5C1A65FB2100C03B92 /* PhysicsBody.cpp */,
+				23A6CE5D1A65FB2100C03B92 /* PhysicsBody.h */,
+				23A6CE5F1A664DF000C03B92 /* GameObject.cpp */,
+				23A6CE601A664DF000C03B92 /* GameObject.h */,
+				23A6CE621A6668E600C03B92 /* GameObjectManager.cpp */,
+				23A6CE631A6668E600C03B92 /* GameObjectManager.h */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -202,7 +222,11 @@
 			files = (
 				23F9F2691A5E26E9008BE462 /* SedimentalStorm.cpp in Sources */,
 				23F9F24C1A5E1143008BE462 /* main.cpp in Sources */,
+				23A6CE611A664DF000C03B92 /* GameObject.cpp in Sources */,
 				23F9F2491A5E1143008BE462 /* ResourcePath.mm in Sources */,
+				23A6CE5B1A65DE1300C03B92 /* Physics.cpp in Sources */,
+				23A6CE641A6668E600C03B92 /* GameObjectManager.cpp in Sources */,
+				23A6CE5E1A65FB2100C03B92 /* PhysicsBody.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +382,7 @@
 				23F9F25A1A5E1143008BE462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
