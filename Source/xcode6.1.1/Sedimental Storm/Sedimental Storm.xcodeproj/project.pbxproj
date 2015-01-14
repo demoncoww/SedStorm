@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23F9F2491A5E1143008BE462 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23F9F2481A5E1143008BE462 /* ResourcePath.mm */; };
+		23F9F24C1A5E1143008BE462 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F9F24B1A5E1143008BE462 /* main.cpp */; };
+		23F9F24F1A5E1143008BE462 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F24E1A5E1143008BE462 /* cute_image.jpg */; };
+		23F9F2511A5E1143008BE462 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F2501A5E1143008BE462 /* nice_music.ogg */; };
+		23F9F2531A5E1143008BE462 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F2521A5E1143008BE462 /* sansation.ttf */; };
+		23F9F2551A5E1143008BE462 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F9F2541A5E1143008BE462 /* icon.png */; };
+		23F9F2691A5E26E9008BE462 /* SedimentalStorm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */; };
+		23F9F26B1A5E2811008BE462 /* libthor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F9F26A1A5E2811008BE462 /* libthor.dylib */; };
+		23F9F26F1A5E288E008BE462 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F9F26E1A5E288E008BE462 /* libBox2D.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23F9F2431A5E1143008BE462 /* Sedimental Storm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sedimental Storm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F9F2471A5E1143008BE462 /* Sedimental Storm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sedimental Storm-Info.plist"; sourceTree = "<group>"; };
+		23F9F2481A5E1143008BE462 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		23F9F24A1A5E1143008BE462 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		23F9F24B1A5E1143008BE462 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		23F9F24E1A5E1143008BE462 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
+		23F9F2501A5E1143008BE462 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
+		23F9F2521A5E1143008BE462 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
+		23F9F2541A5E1143008BE462 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		23F9F25B1A5E1176008BE462 /* 3rdParty */ = {isa = PBXFileReference; lastKnownFileType = folder; name = 3rdParty; path = ../../3rdParty; sourceTree = "<group>"; };
+		23F9F25C1A5E1176008BE462 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.txt; path = ../../readme.txt; sourceTree = "<group>"; };
+		23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SedimentalStorm.cpp; sourceTree = "<group>"; };
+		23F9F2681A5E26E9008BE462 /* SedimentalStorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SedimentalStorm.h; sourceTree = "<group>"; };
+		23F9F26A1A5E2811008BE462 /* libthor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libthor.dylib; path = "../../3rdParty/Thor/Lib-osx/libthor.dylib"; sourceTree = "<group>"; };
+		23F9F26C1A5E282A008BE462 /* libBox2D.2.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libBox2D.2.3.0.dylib; path = "../../3rdParty/Box2D/Lib-osx/libBox2D.2.3.0.dylib"; sourceTree = "<group>"; };
+		23F9F26E1A5E288E008BE462 /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = "../../3rdParty/Box2D/Lib-osx/libBox2D.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23F9F23F1A5E1143008BE462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F9F26B1A5E2811008BE462 /* libthor.dylib in Frameworks */,
+				23F9F26F1A5E288E008BE462 /* libBox2D.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23F9F2391A5E1143008BE462 = {
+			isa = PBXGroup;
+			children = (
+				23F9F26E1A5E288E008BE462 /* libBox2D.a */,
+				23F9F26C1A5E282A008BE462 /* libBox2D.2.3.0.dylib */,
+				23F9F26A1A5E2811008BE462 /* libthor.dylib */,
+				23F9F2451A5E1143008BE462 /* Sedimental Storm */,
+				23F9F2441A5E1143008BE462 /* Products */,
+				23F9F25B1A5E1176008BE462 /* 3rdParty */,
+				23F9F25C1A5E1176008BE462 /* readme.txt */,
+				23F9F2661A5E26E9008BE462 /* Source */,
+			);
+			sourceTree = "<group>";
+		};
+		23F9F2441A5E1143008BE462 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23F9F2431A5E1143008BE462 /* Sedimental Storm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23F9F2451A5E1143008BE462 /* Sedimental Storm */ = {
+			isa = PBXGroup;
+			children = (
+				23F9F2481A5E1143008BE462 /* ResourcePath.mm */,
+				23F9F24A1A5E1143008BE462 /* ResourcePath.hpp */,
+				23F9F24B1A5E1143008BE462 /* main.cpp */,
+				23F9F24D1A5E1143008BE462 /* Resources */,
+				23F9F2461A5E1143008BE462 /* Supporting Files */,
+			);
+			path = "Sedimental Storm";
+			sourceTree = "<group>";
+		};
+		23F9F2461A5E1143008BE462 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23F9F2471A5E1143008BE462 /* Sedimental Storm-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23F9F24D1A5E1143008BE462 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23F9F24E1A5E1143008BE462 /* cute_image.jpg */,
+				23F9F2501A5E1143008BE462 /* nice_music.ogg */,
+				23F9F2521A5E1143008BE462 /* sansation.ttf */,
+				23F9F2541A5E1143008BE462 /* icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		23F9F2661A5E26E9008BE462 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				23F9F2671A5E26E9008BE462 /* SedimentalStorm.cpp */,
+				23F9F2681A5E26E9008BE462 /* SedimentalStorm.h */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23F9F2421A5E1143008BE462 /* Sedimental Storm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F9F2581A5E1143008BE462 /* Build configuration list for PBXNativeTarget "Sedimental Storm" */;
+			buildPhases = (
+				23F9F23E1A5E1143008BE462 /* Sources */,
+				23F9F23F1A5E1143008BE462 /* Frameworks */,
+				23F9F2401A5E1143008BE462 /* Resources */,
+				23F9F2411A5E1143008BE462 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sedimental Storm";
+			productName = "Sedimental Storm";
+			productReference = 23F9F2431A5E1143008BE462 /* Sedimental Storm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23F9F23A1A5E1143008BE462 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jacob Cohen";
+				TargetAttributes = {
+					23F9F2421A5E1143008BE462 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 23F9F23D1A5E1143008BE462 /* Build configuration list for PBXProject "Sedimental Storm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 23F9F2391A5E1143008BE462;
+			productRefGroup = 23F9F2441A5E1143008BE462 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23F9F2421A5E1143008BE462 /* Sedimental Storm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23F9F2401A5E1143008BE462 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F9F2551A5E1143008BE462 /* icon.png in Resources */,
+				23F9F2531A5E1143008BE462 /* sansation.ttf in Resources */,
+				23F9F2511A5E1143008BE462 /* nice_music.ogg in Resources */,
+				23F9F24F1A5E1143008BE462 /* cute_image.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23F9F2411A5E1143008BE462 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert : not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"/Library/Frameworks/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"/usr/local/lib/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"/usr/local/lib/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy sndfile framework too\n            copy \"/Library/Frameworks/sndfile.framework\" \"$dest/sndfile.framework\"\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            # copy freetype framework too\n            copy \"/Library/Frameworks/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23F9F23E1A5E1143008BE462 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F9F2691A5E26E9008BE462 /* SedimentalStorm.cpp in Sources */,
+				23F9F24C1A5E1143008BE462 /* main.cpp in Sources */,
+				23F9F2491A5E1143008BE462 /* ResourcePath.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23F9F2561A5E1143008BE462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/include/",
+					"$(SRCROOT)/../../3rdParty/SFML/Source/SFML-2.2/include/",
+					"$(SRCROOT)/../../3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+					"$(SRCROOT)/../../3rdParty/Box2D/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/Thor/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/SFML/Lib-osx",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		23F9F2571A5E1143008BE462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/include/",
+					"$(SRCROOT)/../../3rdParty/SFML/Source/SFML-2.2/include/",
+					"$(SRCROOT)/../../3rdParty/Box2D/Source/Box2D_v2.3.0/Box2D/",
+					"$(SRCROOT)/../../3rdParty/Thor/Source/Thor-master-5Jan2015/extlibs/aurora/include/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+					"$(SRCROOT)/../../3rdParty/Box2D/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/Thor/Lib-osx",
+					"$(SRCROOT)/../../3rdParty/SFML/Lib-osx",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		23F9F2591A5E1143008BE462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sedimental Storm/Sedimental Storm-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		23F9F25A1A5E1143008BE462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Sedimental Storm/Sedimental Storm-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Thor/Lib-osx",
+					"/Users/Jake/Documents/projects/sedimentalstorm/Source/3rdParty/Box2D/Lib-osx",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23F9F23D1A5E1143008BE462 /* Build configuration list for PBXProject "Sedimental Storm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F9F2561A5E1143008BE462 /* Debug */,
+				23F9F2571A5E1143008BE462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F9F2581A5E1143008BE462 /* Build configuration list for PBXNativeTarget "Sedimental Storm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F9F2591A5E1143008BE462 /* Debug */,
+				23F9F25A1A5E1143008BE462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23F9F23A1A5E1143008BE462 /* Project object */;
+}
