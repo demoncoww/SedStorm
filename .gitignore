@@ -1,0 +1,4 @@
+Temp/**
+Source/VS2013/**
+*.ilk
+*.pdb
