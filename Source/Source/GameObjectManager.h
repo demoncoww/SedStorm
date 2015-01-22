@@ -17,9 +17,8 @@
 
 class GameObjectManager{
 public:
-    static sf::RenderWindow window;
     GameObjectManager();
-    void drawLayers();
+    void drawLayers(sf::RenderWindow& window);
     void updateLayers();
     bool pauseLayer(std::string& layerName);
     bool resumeLayer(std::string& layerName);
@@ -29,6 +28,6 @@ public:
 private:
     std::vector<Layer*> _world;
     std::map<std::string, Layer*> _layerNames;
-};*/
+};
 
-#endif /* defined(__Sedimental_Storm__GameObjectManager__)
+#endif /* defined(__Sedimental_Storm__GameObjectManager__) */

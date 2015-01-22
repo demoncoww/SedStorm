@@ -19,7 +19,7 @@
 #include <Thor/Time.hpp>
 #include <Thor/Vectors.hpp>
 
-#include <GameObjectManager.h>
-#include <Triangle.h>
+//#include <GameObjectManager.h>
+//#include <Triangle.h>
 
 #endif

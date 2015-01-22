@@ -17,11 +17,10 @@
 
 class Layer{
 public:
-    static sf::RenderWindow window;
     std::vector<GameObject*> objects;
     ~Layer(); //delete all GameObjects in objects
     void updateObjects();
-    void drawObjects();
+    void drawObjects(sf::RenderWindow& window);
     inline void pause(){ _isActive = false; }
     inline void resume(){ _isActive = true; }
     inline void disable(){ _isVisible = false; _isActive = false; };

@@ -18,10 +18,10 @@ GameLayer* GameObjectManager::createGameLayer(std::string& layerName, bool isAct
 }
 
 // Draws all of the visible layers in _world
-void GameObjectManager::drawLayers(){
+void GameObjectManager::drawLayers(sf::RenderWindow& window){
     for(int i=0; i<_world.size();++i){
         if(_world[i]->isVisible()){
-            _world[i]->drawObjects();
+            _world[i]->drawObjects(window);
         }
     }
 }

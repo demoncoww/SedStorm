@@ -8,9 +8,6 @@
 
 #include "Layer.h"
 
-//THIS SHOULD BE MOVED TO THE RENDER ONCE ITS BUILT
-sf::RenderWindow Layer::window(sf::VideoMode(200, 200), "SFML works!");
-
 Layer::Layer(): objects(0), _isVisible(true), _isActive(true)
 {}
 
@@ -23,9 +20,9 @@ void Layer::updateObjects(){
     }
 }
 
-void Layer::drawObjects(){
+void Layer::drawObjects(sf::RenderWindow& window){
     for(int i=0; i<objects.size(); i++){
-        objects[i]->draw(Layer::window);
+        objects[i]->draw(window);
     }
 }
 
