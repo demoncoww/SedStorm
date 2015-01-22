@@ -4,23 +4,23 @@ GameManager::GameManager()
 {
 	gameWindow = new sf::RenderWindow;
 	renderManager = new RenderManager;
+	physicsManager = new PhysicsManager;
 }
 
 
 GameManager::~GameManager()
 {
-	delete(renderManager);
-	delete(gameWindow);
+	delete physicsManager;
+	delete renderManager;
+	delete gameWindow;
 }
 
 void GameManager::InitInstance()
 {
-	b2Vec2 gravity(0.0f, -9.8f);
-	b2World world(gravity);
-
 	gameWindow->create(sf::VideoMode(800, 600, 32), "Sedimental Storm");
 	renderManager->SetGameWindow(gameWindow);
 	renderManager->InitInstance();
+	physicsManager->InitInstance();
 }
 
 void GameManager::MainLoop()
@@ -45,11 +45,11 @@ void GameManager::MainLoop()
 			// physics simulation
 			timeSinceLastUpdate = currentTime - lastFrameTime;
 			if (timeSinceLastUpdate > FRAMETIME * 2.0f) {
-				frame = currentTime / FRAMETIME;
+				frame = (int)(currentTime / FRAMETIME);
 				timeSinceLastUpdate = FRAMETIME;
 			}
 			if (timeSinceLastUpdate < FRAMETIME * 0.75f) {
-				frame = currentTime / FRAMETIME;
+				frame = (int)(currentTime / FRAMETIME);
 				timeSinceLastUpdate = FRAMETIME;
 			}
 			++frame;
@@ -57,6 +57,7 @@ void GameManager::MainLoop()
 			printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
 			// render scene
 			renderManager->Draw();
+			physicsManager->Update();
 		}
 	}
 }
