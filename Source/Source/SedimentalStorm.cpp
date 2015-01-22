@@ -1,24 +1,10 @@
-// SFML includes
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Window.hpp>
-// Box2D includes
-#include <Box2D/Box2D.h>
-// Thor includes
-#include <Thor/Animations.hpp>
-#include <Thor/Config.hpp>
-#include <Thor/Graphics.hpp>
-#include <Thor/Input.hpp>
-#include <Thor/Math.hpp>
-#include <Thor/Particles.hpp>
-#include <Thor/Shapes.hpp>
-#include <Thor/Time.hpp>
-#include <Thor/Vectors.hpp>
+
 
 #ifdef _MSC_VER
 // Visual Studio specific stuff here
 #endif
+
+#include "SedimentalStorm.h"
 
 int main(int argc, char *argv[]) {
     b2Vec2 gravity(0.0f, -10.0f);
@@ -28,20 +14,27 @@ int main(int argc, char *argv[]) {
     thor::ParticleSystem system;
     system.setTexture(texture);
 
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
-    while (window.isOpen()) {
+    GameObjectManager gmManager;
+    std::string name = "game";
+    GameLayer* layer = gmManager.createGameLayer(name, true, true);
+    layer->objects.push_back(new Triangle());
+    
+    while (Layer::window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (Layer::window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
-                window.close();
+                Layer::window.close();
         }
 
-        window.clear();
-        window.draw(shape);
-        window.display();
+        gmManager.updateLayers();
+        
+        Layer::window.clear();
+        //window.draw(shape);
+        gmManager.drawLayers();
+        Layer::window.display();
     }
 
     return 0;
