@@ -2,14 +2,18 @@
 // Game includes
 #include "GameManager.h"
 
+void RedirectIOToConsole(void);
 int main(int argc, char *argv[]) {
-    //b2Vec2 gravity(0.0f, -10.0f);
-    //b2World world(gravity);
-
     //sf::Texture texture;
     //thor::ParticleSystem system;
     //system.setTexture(texture);
 	GameManager game;
+
+	#ifdef _DEBUG
+		#ifdef _MSC_VER
+			RedirectIOToConsole(); // create a console for debugging so that we can print out debug data (WINDOWS ONLY)
+		#endif
+	#endif
 
 	game.InitInstance();
 	game.MainLoop();
