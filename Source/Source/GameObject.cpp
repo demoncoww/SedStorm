@@ -8,28 +8,29 @@
 
 #include "GameObject.h"
 
-GameObject::GameObject() : _position(0,0), _angle(0), _scale(1,1), _parent(nullptr)
+GameObject::GameObject() : _parent(nullptr)
 {
 }
 
+//TODO: TRIED ADDING SHAPE AS A PROPERTY OF GAMEOBJECT, BAD IDEA NO CLUE HOW TO COPY IT USING THE BASE POINTER. GO BACK TO INHERITING FROM DRAWABLE, FIGURE IT OUT.
+
 //Copy constructor does not copy parent child relationships
-GameObject::GameObject (const GameObject& obj) :
-_position(obj._position),
-_angle(obj._angle),
-_scale(obj._scale),
-_parent(nullptr)
-{}
+GameObject::GameObject (const GameObject& obj) : _parent(nullptr), sf::Transformable(obj)
+{
+}
 
 
 //If you assign one game object to another it will copy over parameters but not parent child relationships
-GameObject& GameObject::operator=(const GameObject& obj){
+GameObject& GameObject::operator=(const GameObject& obj)
+{
     if(&obj == this){
         return *this;
     }
     
-    _position = obj._position;
-    _angle = obj._angle;
-    _scale = obj._scale;
+    setPosition(obj.getPosition());
+    setRotation(obj.getRotation());
+    setScale(obj.getScale());
+    setOrigin(obj.getOrigin());
 }
 
 void GameObject::setParent(GameObject& parent){
@@ -38,7 +39,10 @@ void GameObject::setParent(GameObject& parent){
 }
 
 //Virtual functions
-void GameObject::draw(){}
+void GameObject::draw(sf::RenderWindow& window)
+{
+}
+
 void GameObject::update(){}
 GameObject::~GameObject(){}
 

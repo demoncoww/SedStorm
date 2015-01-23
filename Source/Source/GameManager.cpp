@@ -5,6 +5,7 @@ GameManager::GameManager()
 	gameWindow = new sf::RenderWindow;
 	renderManager = new RenderManager;
 	physicsManager = new PhysicsManager;
+    gameObjectManager = new GameObjectManager;
 }
 
 
@@ -13,14 +14,23 @@ GameManager::~GameManager()
 	delete physicsManager;
 	delete renderManager;
 	delete gameWindow;
+	delete(renderManager);
+	delete(gameWindow);
+    delete(gameObjectManager);
 }
 
 void GameManager::InitInstance()
 {
 	gameWindow->create(sf::VideoMode(800, 600, 32), "Sedimental Storm");
 	renderManager->SetGameWindow(gameWindow);
+    renderManager->SetGameObjectManager(gameObjectManager);
 	renderManager->InitInstance();
 	physicsManager->InitInstance();
+    
+    //Insert test triangle into the gameObjectManager
+    std::string name = "game";
+    GameLayer* layer = gameObjectManager->createGameLayer(name, true, true);
+    layer->objects.push_back(new Triangle());
 }
 
 void GameManager::MainLoop()
@@ -39,7 +49,7 @@ void GameManager::MainLoop()
 				gameWindow->close();
 			// send events to eventmanager (keyboard, gamepad stuff)
 		}
-		printf("Processing Messages\n");
+		//printf("Processing Messages\n");
 		currentTime = clock.getElapsedTime().asSeconds();
 		if (currentTime >= FRAMETIME * frame) {
 			// physics simulation
@@ -54,8 +64,11 @@ void GameManager::MainLoop()
 			}
 			++frame;
 			lastFrameTime = currentTime;
-			printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
-			// render scene
+			//printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
+            //Run game logic:
+            gameObjectManager->updateLayers();
+            
+            // render scene
 			renderManager->Draw();
 			physicsManager->Update();
 		}
