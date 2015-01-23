@@ -20,10 +20,23 @@ void Layer::updateObjects(){
     }
 }
 
-void Layer::drawObjects(sf::RenderWindow& window){
+void Layer::drawObjects(sf::RenderWindow& window) {
     for(unsigned int i=0; i<objects.size(); i++){
-        objects[i]->draw(window);
+		if (objects[i]->IsTopLevel()) {
+			sf::RenderStates renderState = sf::RenderStates::Default;
+			objects[i]->draw(window, renderState);
+			renderState.transform = objects[i]->getTransform();
+			DrawChildren(window, objects[i], renderState);
+		}
     }
+}
+
+void Layer::DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState) {
+	for (auto child : parent->getChildren()) {
+		renderState.transform *= child->getTransform();
+		child->draw(target, renderState);
+		DrawChildren(target, child, renderState);
+	}
 }
 
 Layer::~Layer(){

@@ -19,7 +19,7 @@ public:
     Triangle();
     sf::ConvexShape* shape;
     virtual void update();
-    virtual void draw(sf::RenderWindow& window);
+	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__Triangle__) */

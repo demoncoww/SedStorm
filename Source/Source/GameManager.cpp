@@ -30,7 +30,20 @@ void GameManager::InitInstance()
     //Insert test triangle into the gameObjectManager
     std::string name = "game";
     GameLayer* layer = gameObjectManager->createGameLayer(name, true, true);
-    layer->objects.push_back(new Triangle());
+	Triangle* triangle1 = new Triangle;
+	Triangle* triangle2 = new Triangle;
+	triangle2->rotate(120);
+	triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(10,10));
+	triangle2->shape->setFillColor(sf::Color(250, 100, 50));
+	Triangle* triangle3 = new Triangle;
+	triangle3->rotate(240);
+	triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(-10, -10));
+	triangle3->shape->setFillColor(sf::Color(50, 100, 250));
+	triangle2->setParent(triangle1);
+	triangle3->setParent(triangle2);
+	layer->objects.push_back(triangle1);
+	layer->objects.push_back(triangle2);
+	layer->objects.push_back(triangle3);
 }
 
 void GameManager::MainLoop()

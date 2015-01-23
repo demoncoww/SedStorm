@@ -23,7 +23,7 @@ void Triangle::update(){
     shape->rotate(3);
 }
 
-void Triangle::draw(sf::RenderWindow& window){
+void Triangle::draw(sf::RenderTarget& window, sf::RenderStates& renderState){
     window.draw(*shape);
 }
 
