@@ -8,9 +8,9 @@ GameManager::GameManager()
     gameObjectManager = new GameObjectManager;
 }
 
-
 GameManager::~GameManager()
 {
+	delete gameObjectManager;
 	delete physicsManager;
 	delete renderManager;
 	delete gameWindow;
@@ -30,11 +30,11 @@ void GameManager::InitInstance()
 	Triangle* triangle1 = new Triangle;
 	Triangle* triangle2 = new Triangle;
 	triangle2->rotate(120);
-	triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(10,10));
+	triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(50, 50));
 	triangle2->shape->setFillColor(sf::Color(250, 100, 50));
 	Triangle* triangle3 = new Triangle;
 	triangle3->rotate(240);
-	triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(-10, -10));
+	triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(-50, -50));
 	triangle3->shape->setFillColor(sf::Color(50, 100, 250));
 	triangle2->setParent(triangle1);
 	triangle3->setParent(triangle2);

@@ -20,10 +20,10 @@ Triangle::Triangle(){
 }
 
 void Triangle::update(){
-    shape->rotate(3);
+    shape->rotate(2);
 }
 
 void Triangle::draw(sf::RenderTarget& window, sf::RenderStates& renderState){
-    window.draw(*shape);
+    window.draw(*shape, renderState);
 }
 
