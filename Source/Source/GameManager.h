@@ -2,11 +2,11 @@
 #define _GAMEMANAGER
 // SFML includes
 //#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 //#include <SFML/Audio.hpp>
-//#include <SFML/Window.hpp>
+#include <SFML/Window.hpp>
 // Box2D includes
-#include <Box2D/Box2D.h>
+//#include <Box2D/Box2D.h>
 // Thor includes
 //#include <Thor/Animations.hpp>
 //#include <Thor/Config.hpp>
@@ -14,11 +14,12 @@
 //#include <Thor/Input.hpp>
 //#include <Thor/Math.hpp>
 //#include <Thor/Particles.hpp>
-#include <Thor/Shapes.hpp>
+//#include <Thor/Shapes.hpp>
 //#include <Thor/Time.hpp>
 //#include <Thor/Vectors.hpp>
 
 #include "RenderManager.h"
+#include "PhysicsManager.h"
 #include "GameObjectManager.h"
 #include "Triangle.h"
 
@@ -29,7 +30,7 @@ private:
 	// ResourceManager* resourceManager;
 	// InputManager* inputManager;
 	// LevelManager* levelManager;
-	// PhysicsManager* physicsManager;
+	PhysicsManager* physicsManager;
 	RenderManager* renderManager;
     GameObjectManager* gameObjectManager;
 	sf::RenderWindow* gameWindow;

@@ -15,19 +15,19 @@ Layer::Layer(bool isVisible, bool isActive): objects(0), _isVisible(isVisible), 
 {}
 
 void Layer::updateObjects(){
-    for(int i=0; i<objects.size(); i++){
+    for(unsigned int i=0; i<objects.size(); i++){
         objects[i]->update();
     }
 }
 
 void Layer::drawObjects(sf::RenderWindow& window){
-    for(int i=0; i<objects.size(); i++){
+    for(unsigned int i=0; i<objects.size(); i++){
         objects[i]->draw(window);
     }
 }
 
 Layer::~Layer(){
-    for(int i=0; i<objects.size(); i++){
+    for(unsigned int i=0; i<objects.size(); i++){
         delete objects[i];
     }
 }

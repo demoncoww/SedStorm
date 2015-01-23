@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include "GameObject.h"
 
-#endif /* defined(__Sedimental_Storm__Square__) */
 
 class Square: public GameObject{
 public:
@@ -22,3 +21,5 @@ public:
 private:
     sf::VertexArray verts;
 };
+
+#endif /* defined(__Sedimental_Storm__Square__) */
