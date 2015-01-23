@@ -10,7 +10,7 @@
 #define __Sedimental_Storm__Square__
 
 #include <stdio.h>
-#include <GameObject.h>
+#include "GameObject.h"
 
 #endif /* defined(__Sedimental_Storm__Square__) */
 

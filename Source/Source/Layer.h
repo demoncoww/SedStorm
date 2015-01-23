@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <vector>
-#include <GameObject.h>
+#include "GameObject.h"
 #include <SFML/Graphics.hpp>
 //#include <GameObjectManager.h>
 

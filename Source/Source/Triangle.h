@@ -10,7 +10,7 @@
 #define __Sedimental_Storm__Triangle__
 
 #include <stdio.h>
-#include <GameObject.h>
+#include "GameObject.h"
 
 
 class Triangle: public GameObject
