@@ -1,8 +1,10 @@
-
 // Game includes
 #include "GameManager.h"
 
+#include "SedimentalStorm.h"
+
 void RedirectIOToConsole(void);
+
 int main(int argc, char *argv[]) {
     //sf::Texture texture;
     //thor::ParticleSystem system;

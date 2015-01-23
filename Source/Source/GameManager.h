@@ -19,6 +19,8 @@
 //#include <Thor/Vectors.hpp>
 
 #include "RenderManager.h"
+#include "GameObjectManager.h"
+#include "Triangle.h"
 
 class GameManager
 {
@@ -26,11 +28,10 @@ private:
 	// MessageManager* messageManger;
 	// ResourceManager* resourceManager;
 	// InputManager* inputManager;
-	// GameObjectManager* gameObjectManager;
 	// LevelManager* levelManager;
 	// PhysicsManager* physicsManager;
 	RenderManager* renderManager;
-
+    GameObjectManager* gameObjectManager;
 	sf::RenderWindow* gameWindow;
 public:
 	GameManager();
