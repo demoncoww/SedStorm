@@ -14,9 +14,6 @@ GameManager::~GameManager()
 	delete physicsManager;
 	delete renderManager;
 	delete gameWindow;
-	delete(renderManager);
-	delete(gameWindow);
-    delete(gameObjectManager);
 }
 
 void GameManager::InitInstance()
