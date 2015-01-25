@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Jacob Cohen. All rights reserved.
 //
 
-#ifndef __Sedimental_Storm__Triangle__
-#define __Sedimental_Storm__Triangle__
+#ifndef __Sedimental_Storm__ConcaveTriangle__
+#define __Sedimental_Storm__ConcaveTriangle__
 
 #include <stdio.h>
 #include "GameObject.h"
 #include <Thor/Math.hpp>
 
 
-class Triangle: public virtual GameObject, public virtual sf::ConvexShape
+class ConcaveTriangle : public virtual GameObject, public virtual thor::ConcaveShape
 {
 public:
-    Triangle();
+    ConcaveTriangle();
     virtual void update();
 	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
-#endif /* defined(__Sedimental_Storm__Triangle__) */
+#endif /* defined(__Sedimental_Storm__ConcaveTriangle__) */

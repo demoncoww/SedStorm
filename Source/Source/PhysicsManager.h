@@ -20,15 +20,16 @@ public:
 	// returns true if a polygon is concave
 	bool IsConcave(thor::ConcaveShape shape);
 	// returns true if a polygon is complex (crossing lines or a hole)
+	// http://stackoverflow.com/questions/4001745/testing-whether-a-polygon-is-simple-or-complex
 	bool IsComplex(thor::ConcaveShape shape);
 	// we need functions for: splitting a complex polygon into simple polygons
-	// http://stackoverflow.com/questions/4001745/testing-whether-a-polygon-is-simple-or-complex
 	// we also need a function to slice concave polygons
 	// http://www.emanueleferonato.com/2011/08/05/slicing-splitting-and-cutting-objects-with-box2d-part-4-using-real-graphics/
 
-    // converts a SFML shape intp a Box2D polygon shape
-    b2PolygonShape ShapeToPolygon(const thor::ConcaveShape& shape);
+    // converts a SFML shape into a Box2D polygon shape
+    b2PolygonShape ShapeToPolygon(const sf::ConvexShape& shape);
     // adds a SFML shape to the current world, creating a body and fixture for it first
-    void AddShapeToWorld(const thor::ConcaveShape& shape);
+    void AddShapeToWorld(const sf::ConvexShape& shape);
+    
 };
 #endif // _PHYSICSMANAGER

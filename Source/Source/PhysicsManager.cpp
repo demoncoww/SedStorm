@@ -30,22 +30,21 @@ void PhysicsManager::Update()
 	world->Step(FRAMETIME, velocityIterations, positionIterations);
 }
 
-// converts a thor ConcavePolygon shape intp a Box2D polygon shape
-b2PolygonShape PhysicsManager::ShapeToPolygon(const thor::ConcaveShape& shape) {
+// converts a SFML shape into a Box2D polygon shape
+b2PolygonShape PhysicsManager::ShapeToPolygon(const sf::ConvexShape& shape) {
     b2PolygonShape polygon;
     int numVerts = shape.getPointCount();
-    b2Vec2* vertices = new b2Vec2[numVerts];
+    b2Vec2* vertices = (b2Vec2*)alloca(sizeof(b2Vec2) * numVerts); // allocate temp vertices on the stack
     for (unsigned int i = 0; i < shape.getPointCount(); ++i) {
         sf::Vector2f point = shape.getPoint(i);
         vertices[i].Set(point.x, point.y);
     }
     polygon.Set(vertices, numVerts);
-    delete vertices;
     return polygon;
 }
 
 // adds a SFML shape to the current world, creating a body and fixture for it first
-void PhysicsManager::AddShapeToWorld(const thor::ConcaveShape& shape) {
+void PhysicsManager::AddShapeToWorld(const sf::ConvexShape& shape) {
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(0.0f, 4.0f);
