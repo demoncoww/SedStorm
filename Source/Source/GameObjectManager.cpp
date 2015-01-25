@@ -11,14 +11,14 @@
 GameObjectManager::GameObjectManager(): _world(0), _layerNames()
 {}
 
-GameLayer* GameObjectManager::createGameLayer(std::string& layerName, bool isActive, bool isVisible){
+GameLayer* GameObjectManager::CreateGameLayer(std::string& layerName, bool isActive, bool isVisible){
     GameLayer* newLayer = new GameLayer(isActive, isVisible);
-    addLayer(layerName, *newLayer);
+    AddLayer(layerName, *newLayer);
     return newLayer;
 }
 
 // Draws all of the visible layers in _world
-void GameObjectManager::drawLayers(sf::RenderWindow& window){
+void GameObjectManager::DrawLayers(sf::RenderWindow& window){
     for(unsigned int i=0; i<_world.size();++i){
         if(_world[i]->isVisible()){
             _world[i]->drawObjects(window);
@@ -27,7 +27,7 @@ void GameObjectManager::drawLayers(sf::RenderWindow& window){
 }
 
 // Updates all the active layers in _world
-void GameObjectManager::updateLayers(){
+void GameObjectManager::UpdateLayers(){
     for(unsigned int i=0; i<_world.size();++i){
         if(_world[i]->isActive()){
             _world[i]->updateObjects();
@@ -41,7 +41,7 @@ void GameObjectManager::updateLayers(){
  * @returns             True if the layer was found and paused, false otherwise
  *
  */
-bool GameObjectManager::pauseLayer(std::string& layerName)
+bool GameObjectManager::PauseLayer(std::string& layerName)
 {
     auto layerIterator = _layerNames.find(layerName);
     if(layerIterator != _layerNames.end()){ //Layer exists
@@ -57,7 +57,7 @@ bool GameObjectManager::pauseLayer(std::string& layerName)
  * @returns             True if the layer was found and resumed, false otherwise
  *
  */
-bool GameObjectManager::resumeLayer(std::string& layerName)
+bool GameObjectManager::ResumeLayer(std::string& layerName)
 {
     auto layerIterator = _layerNames.find(layerName);
     if(layerIterator != _layerNames.end()){ //Layer exists
@@ -74,7 +74,7 @@ bool GameObjectManager::resumeLayer(std::string& layerName)
  * @returns             void
  *
  */
-void GameObjectManager::addLayer(std::string& layerName, Layer& layer)
+void GameObjectManager::AddLayer(std::string& layerName, Layer& layer)
 {
     _layerNames[layerName] = &layer;
     _world.push_back(&layer);
@@ -87,7 +87,7 @@ void GameObjectManager::addLayer(std::string& layerName, Layer& layer)
  *
  */
 //Should this delete the removed layer?
-bool GameObjectManager::removeLayer(std::string& layerName)
+bool GameObjectManager::RemoveLayer(std::string& layerName)
 {
     auto layerIterator = _layerNames.find(layerName);
     if(layerIterator != _layerNames.end()){ //Layer exists

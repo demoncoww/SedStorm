@@ -19,12 +19,12 @@ class GameObject: public sf::Transformable{
 friend class GameObjectManager;
 public:
     GameObject& operator=(const GameObject& obj);
-    virtual void update();
-    virtual void draw(sf::RenderWindow& window);
+    virtual void Update();
+    virtual void Draw(sf::RenderWindow& window);
     virtual ~GameObject();
-    void setParent(GameObject& parent);
-    inline GameObject& getParent(){return *_parent;}
-    inline std::vector<GameObject*>& getChildren(){return _children;}
+    virtual void SetParent(GameObject& parent);
+    inline GameObject& GetParent(){return *_parent;}
+    inline std::vector<GameObject*>& GetChildren(){return _children;}
 protected:
     //Constructors are protected to force use of factory functions
     GameObject();

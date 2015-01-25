@@ -24,6 +24,6 @@ void RenderManager::SetGameObjectManager(GameObjectManager* theGameObjectManager
 void RenderManager::Draw()
 {
 	gameWindow->clear();
-    gameObjectManager->drawLayers(*gameWindow);
+    gameObjectManager->DrawLayers(*gameWindow);
 	gameWindow->display();
 }

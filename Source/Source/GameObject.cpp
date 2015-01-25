@@ -33,16 +33,16 @@ GameObject& GameObject::operator=(const GameObject& obj)
     setOrigin(obj.getOrigin());
 }
 
-void GameObject::setParent(GameObject& parent){
+//Virtual functions
+void GameObject::SetParent(GameObject& parent){
     _parent = &parent;
     parent._children.push_back(this);
 }
 
-//Virtual functions
-void GameObject::draw(sf::RenderWindow& window)
+void GameObject::Draw(sf::RenderWindow& window)
 {
 }
 
-void GameObject::update(){}
+void GameObject::Update(){}
 GameObject::~GameObject(){}
 

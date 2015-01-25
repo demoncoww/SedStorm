@@ -19,11 +19,11 @@ Triangle::Triangle(){
     shape->setFillColor(sf::Color::Green);
 }
 
-void Triangle::update(){
+void Triangle::Update(){
     shape->rotate(3);
 }
 
-void Triangle::draw(sf::RenderWindow& window){
+void Triangle::Draw(sf::RenderWindow& window){
     window.draw(*shape);
 }
 

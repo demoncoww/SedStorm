@@ -16,13 +16,13 @@ Layer::Layer(bool isVisible, bool isActive): objects(0), _isVisible(isVisible), 
 
 void Layer::updateObjects(){
     for(unsigned int i=0; i<objects.size(); i++){
-        objects[i]->update();
+        objects[i]->Update();
     }
 }
 
 void Layer::drawObjects(sf::RenderWindow& window){
     for(unsigned int i=0; i<objects.size(); i++){
-        objects[i]->draw(window);
+        objects[i]->Draw(window);
     }
 }
 

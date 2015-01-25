@@ -18,13 +18,13 @@
 class GameObjectManager{
 public:
     GameObjectManager();
-    void drawLayers(sf::RenderWindow& window);
-    void updateLayers();
-    bool pauseLayer(std::string& layerName);
-    bool resumeLayer(std::string& layerName);
-    void addLayer(std::string& layerName, Layer& layer);
-    GameLayer* createGameLayer(std::string& layerName, bool isActive, bool isVisible);
-    bool removeLayer(std::string& layerName);
+    void DrawLayers(sf::RenderWindow& window);
+    void UpdateLayers();
+    bool PauseLayer(std::string& layerName);
+    bool ResumeLayer(std::string& layerName);
+    void AddLayer(std::string& layerName, Layer& layer);
+    GameLayer* CreateGameLayer(std::string& layerName, bool isActive, bool isVisible);
+    bool RemoveLayer(std::string& layerName);
 private:
     std::vector<Layer*> _world;
     std::map<std::string, Layer*> _layerNames;
