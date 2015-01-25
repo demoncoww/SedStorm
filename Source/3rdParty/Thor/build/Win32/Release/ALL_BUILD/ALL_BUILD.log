@@ -1,0 +1,11 @@
+﻿Build started 1/25/2015 1:16:38 PM.
+     1>Project "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\ALL_BUILD.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/CMakeLists.txt
+         CMake does not need to re-run because G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\CMakeFiles\generate.stamp is up-to-date.
+         Build all projects
+     1>Done Building Project "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\ALL_BUILD.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.18

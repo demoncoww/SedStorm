@@ -61,7 +61,8 @@ class BigTexture;
 ///  The interface of thor::%BigSprite is very similar to sf::Sprite.
 /// @n@n thor::%BigSprite inherits sf::Drawable and sf::Transformable, so it also contains getPosition(), getTransform(), draw()
 ///  etc. which are not listed here.
-class THOR_API BigSprite : public sf::Drawable, public sf::Transformable
+// CHANGED inheritance of Transformable to virtual
+class THOR_API BigSprite : public sf::Drawable, virtual public sf::Transformable
 {
 	// ---------------------------------------------------------------------------------------------------------------------------
 	// Public member functions

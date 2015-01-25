@@ -27,8 +27,8 @@ public:
 	// http://www.emanueleferonato.com/2011/08/05/slicing-splitting-and-cutting-objects-with-box2d-part-4-using-real-graphics/
 
     // converts a SFML shape intp a Box2D polygon shape
-    b2PolygonShape ShapeToPolygon(const sf::ConvexShape& shape);
+    b2PolygonShape ShapeToPolygon(const thor::ConcaveShape& shape);
     // adds a SFML shape to the current world, creating a body and fixture for it first
-    void AddShapetoWorld(const sf::ConvexShape& shape);
+    void AddShapeToWorld(const thor::ConcaveShape& shape);
 };
 #endif // _PHYSICSMANAGER

@@ -202,6 +202,10 @@ const Transform& Transformable::getTransform() const
     return m_transform;
 }
 
+// ADDED
+void Transformable::setTransform(const Transform& xform) {
+        m_transform = xform;
+}
 
 ////////////////////////////////////////////////////////////
 const Transform& Transformable::getInverseTransform() const

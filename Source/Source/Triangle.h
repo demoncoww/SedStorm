@@ -14,11 +14,10 @@
 #include <Thor/Math.hpp>
 
 
-class Triangle: public GameObject
+class Triangle: public virtual GameObject, public virtual thor::ConcaveShape
 {
 public:
     Triangle();
-    sf::ConvexShape* shape; // we aren't using the transformable base class of shape
     virtual void update();
 	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };

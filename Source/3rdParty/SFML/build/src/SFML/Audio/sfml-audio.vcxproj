@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{80AAC648-656C-435B-B0E5-991D001CF243}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>sfml-audio</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sfml-audio.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sfml-audio-d-2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sfml-audio.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sfml-audio-2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">sfml-audio.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">sfml-audio-2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">sfml-audio.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">sfml-audio-2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Debug";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Debug\sfml-system-d.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\openal32.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\sndfile.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Debug/sfml-audio-d.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Debug/sfml-audio-d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Release";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\sfml-system.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\openal32.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\sndfile.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Release/sfml-audio.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Release/sfml-audio.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\sfml-system.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\openal32.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\sndfile.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/MinSizeRel/sfml-audio.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/MinSizeRel/sfml-audio.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";SFML_AUDIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\AL;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libsndfile\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\sfml-system.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\openal32.lib;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\sndfile.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/RelWithDebInfo/sfml-audio.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/RelWithDebInfo/sfml-audio.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2 -BG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build --check-stamp-file G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindOpenAL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\cmake\Modules\FindSndfile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2 -BG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build --check-stamp-file G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindOpenAL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\cmake\Modules\FindSndfile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2 -BG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build --check-stamp-file G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindOpenAL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\cmake\Modules\FindSndfile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2 -BG:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build --check-stamp-file G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindOpenAL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\cmake\Modules\FindSndfile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.0\Modules\CMakeParseArguments.cmake;G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\ALCheck.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\AudioDevice.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\Export.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\Music.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundFile.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Audio\SoundStream.hpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\ALCheck.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\AudioDevice.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\Listener.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\Music.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\Sound.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundBuffer.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundBufferRecorder.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundFile.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundRecorder.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundSource.cpp"  />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Audio\SoundStream.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/ZERO_CHECK.vcxproj">
+      <Project>0333DCC4-2FEA-4651-8230-9E159392692E</Project>
+    </ProjectReference>
+    <ProjectReference Include="G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/System/sfml-system.vcxproj">
+      <Project>363AFE24-69FA-4A99-8ACD-23847B7DCE76</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

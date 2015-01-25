@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\CMakeLists.txt" />
+    <CustomBuild Include="CMakeFiles\bc7c3df6876042a697cdf67e842ee668\ALL_BUILD.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EFA884A1-4449-40C4-B2BE-80E7EF1854C6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

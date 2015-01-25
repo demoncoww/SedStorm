@@ -1,0 +1,72 @@
+﻿Build started 1/25/2015 1:16:14 PM.
+     1>Project "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\src\thor.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/Source/Thor-master-5Jan2015/src/CMakeLists.txt
+         CMake does not need to re-run because G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\src\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\include" /I"G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\extlibs\aurora\include" /I"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D THOR_EXPORTS /D "CMAKE_INTDIR=\"Debug\"" /D thor_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"thor.dir\Debug\\" /Fd"thor.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Action.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ActionOperations.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Affectors.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Arrow.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\BigSprite.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\BigTexture.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\CallbackTimer.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ColorAnimation.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ColorGradient.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ConcaveShape.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Connection.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Distributions.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Emitters.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\FadeAnimation.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\FrameAnimation.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\InputNames.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Joystick.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Particle.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ParticleSystem.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Random.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Shapes.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\StopWatch.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Timer.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ToString.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Triangulation.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Trigonometry.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\UniformAccess.cpp"
+         Action.cpp
+         ActionOperations.cpp
+         Affectors.cpp
+         Arrow.cpp
+         BigSprite.cpp
+         BigTexture.cpp
+         CallbackTimer.cpp
+         ColorAnimation.cpp
+         ColorGradient.cpp
+         ConcaveShape.cpp
+         Connection.cpp
+         Distributions.cpp
+         Emitters.cpp
+         FadeAnimation.cpp
+         FrameAnimation.cpp
+         InputNames.cpp
+         Joystick.cpp
+         Particle.cpp
+         ParticleSystem.cpp
+         Random.cpp
+         Generating Code...
+         Compiling...
+         Shapes.cpp
+         StopWatch.cpp
+         Timer.cpp
+         ToString.cpp
+         Triangulation.cpp
+         Trigonometry.cpp
+         UniformAccess.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\src\Debug\thor-d.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\sfml-audio-d.lib" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\sfml-graphics-d.lib" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\sfml-window-d.lib" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/src/Debug/thor-d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/src/Debug/thor-d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug /DLL thor.dir\Debug\Action.obj
+         thor.dir\Debug\ActionOperations.obj
+         thor.dir\Debug\Affectors.obj
+         thor.dir\Debug\Arrow.obj
+         thor.dir\Debug\BigSprite.obj
+         thor.dir\Debug\BigTexture.obj
+         thor.dir\Debug\CallbackTimer.obj
+         thor.dir\Debug\ColorAnimation.obj
+         thor.dir\Debug\ColorGradient.obj
+         thor.dir\Debug\ConcaveShape.obj
+         thor.dir\Debug\Connection.obj
+         thor.dir\Debug\Distributions.obj
+         thor.dir\Debug\Emitters.obj
+         thor.dir\Debug\FadeAnimation.obj
+         thor.dir\Debug\FrameAnimation.obj
+         thor.dir\Debug\InputNames.obj
+         thor.dir\Debug\Joystick.obj
+         thor.dir\Debug\Particle.obj
+         thor.dir\Debug\ParticleSystem.obj
+         thor.dir\Debug\Random.obj
+         thor.dir\Debug\Shapes.obj
+         thor.dir\Debug\StopWatch.obj
+         thor.dir\Debug\Timer.obj
+         thor.dir\Debug\ToString.obj
+         thor.dir\Debug\Triangulation.obj
+         thor.dir\Debug\Trigonometry.obj
+         thor.dir\Debug\UniformAccess.obj
+            Creating library G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/src/Debug/thor-d.lib and object G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/src/Debug/thor-d.exp
+         thor.vcxproj -> G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\src\Debug\thor-d.dll
+     1>Done Building Project "G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\build\src\thor.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.09

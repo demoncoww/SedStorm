@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Audio/CMakeLists.txt
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/FindOpenAL.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeParseArguments.cmake
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/cmake/Modules/FindSndfile.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeParseArguments.cmake

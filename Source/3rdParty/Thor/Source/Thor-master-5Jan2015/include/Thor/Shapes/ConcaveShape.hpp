@@ -59,7 +59,8 @@ namespace thor
 /// @brief Concave shape class
 /// @details This class has an interface and functionality similar to sf::ConvexShape, but is additionally able to work
 ///  with shapes that are concave. It inherits the sf::Drawable and sf::Transformable classes.
-class THOR_API ConcaveShape : public sf::Drawable, public sf::Transformable
+// CHANGED inheritance of Transformable to virtual
+class THOR_API ConcaveShape : public sf::Drawable, virtual public sf::Transformable
 {
 	// ---------------------------------------------------------------------------------------------------------------------------
 	// Public member functions

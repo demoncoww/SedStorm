@@ -300,6 +300,8 @@ public:
     ///
     ////////////////////////////////////////////////////////////
     const Transform& getTransform() const;
+    // ADDED
+    void setTransform(const Transform&);
 
     ////////////////////////////////////////////////////////////
     /// \brief get the inverse of the combined transform of the object

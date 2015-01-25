@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\BlendMode.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Color.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Font.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\GLCheck.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\GLExtensions.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Image.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\ImageLoader.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderStates.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTexture.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTarget.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderWindow.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Shader.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Texture.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\TextureSaver.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Transform.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Transformable.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\View.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Vertex.cpp" />
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Shape.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\CircleShape.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RectangleShape.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\ConvexShape.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Sprite.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Text.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\VertexArray.cpp">
+      <Filter>drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImpl.cpp">
+      <Filter>render texture</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImplFBO.cpp">
+      <Filter>render texture</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImplDefault.cpp">
+      <Filter>render texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\BlendMode.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Color.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Export.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Font.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Glyph.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\GLCheck.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\GLExtensions.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Image.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\ImageLoader.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Rect.inl" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\RenderStates.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\RenderTexture.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\RenderWindow.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Shader.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Texture.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\TextureSaver.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Transform.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Transformable.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\View.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Drawable.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Shape.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\CircleShape.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\RectangleShape.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\ConvexShape.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Sprite.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\Text.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include\SFML\Graphics\VertexArray.hpp">
+      <Filter>drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImpl.hpp">
+      <Filter>render texture</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImplFBO.hpp">
+      <Filter>render texture</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImplDefault.hpp">
+      <Filter>render texture</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\stb_image\stb_image.h">
+      <Filter>stb_image</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\stb_image\stb_image_write.h">
+      <Filter>stb_image</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="drawables">
+      <UniqueIdentifier>{E9A8E45A-3828-4B0B-BB67-3F719A088707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render texture">
+      <UniqueIdentifier>{A19EDF3B-66B9-4C60-AF7C-A3F49B686CA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stb_image">
+      <UniqueIdentifier>{4E80AF11-8845-4FD1-8E1A-CA914AEF2FC8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
