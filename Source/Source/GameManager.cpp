@@ -8,9 +8,9 @@ GameManager::GameManager()
     gameObjectManager = new GameObjectManager;
 }
 
-
 GameManager::~GameManager()
 {
+	delete gameObjectManager;
 	delete physicsManager;
 	delete renderManager;
 	delete gameWindow;

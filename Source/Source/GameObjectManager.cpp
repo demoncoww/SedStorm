@@ -20,8 +20,8 @@ GameLayer* GameObjectManager::CreateGameLayer(std::string& layerName, bool isAct
 // Draws all of the visible layers in _world
 void GameObjectManager::DrawLayers(sf::RenderWindow& window){
     for(unsigned int i=0; i<_world.size();++i){
-        if(_world[i]->isVisible()){
-            _world[i]->drawObjects(window);
+        if(_world[i]->IsVisible()){
+            _world[i]->DrawObjects(window);
         }
     }
 }
@@ -29,8 +29,8 @@ void GameObjectManager::DrawLayers(sf::RenderWindow& window){
 // Updates all the active layers in _world
 void GameObjectManager::UpdateLayers(){
     for(unsigned int i=0; i<_world.size();++i){
-        if(_world[i]->isActive()){
-            _world[i]->updateObjects();
+        if(_world[i]->IsActive()){
+            _world[i]->UpdateObjects();
         }
     }
 }
@@ -45,7 +45,7 @@ bool GameObjectManager::PauseLayer(std::string& layerName)
 {
     auto layerIterator = _layerNames.find(layerName);
     if(layerIterator != _layerNames.end()){ //Layer exists
-        layerIterator->second->pause();
+        layerIterator->second->Pause();
         return true;
     }
     return false;
@@ -61,7 +61,7 @@ bool GameObjectManager::ResumeLayer(std::string& layerName)
 {
     auto layerIterator = _layerNames.find(layerName);
     if(layerIterator != _layerNames.end()){ //Layer exists
-        layerIterator->second->resume();
+        layerIterator->second->Resume();
         return true;
     }
     return false;

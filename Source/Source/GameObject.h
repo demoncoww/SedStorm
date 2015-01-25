@@ -15,16 +15,18 @@
 #include <vector>
 
 
-class GameObject: public sf::Transformable{
+class GameObject: public virtual sf::Transformable
+{
 friend class GameObjectManager;
 public:
     GameObject& operator=(const GameObject& obj);
     virtual void Update();
-    virtual void Draw(sf::RenderWindow& window);
+	virtual void Draw(sf::RenderTarget& target, sf::RenderStates& renderState);
     virtual ~GameObject();
-    virtual void SetParent(GameObject& parent);
+    void SetParent(GameObject* parent);
     inline GameObject& GetParent(){return *_parent;}
     inline std::vector<GameObject*>& GetChildren(){return _children;}
+	bool IsTopLevel(); // returns true if the GameObject has no parent, as we only want to draw these, not children
 protected:
     //Constructors are protected to force use of factory functions
     GameObject();
