@@ -12,7 +12,8 @@ GameObject::GameObject() : _parent(nullptr)
 {
 }
 
-//TODO: TRIED ADDING SHAPE AS A PROPERTY OF GAMEOBJECT, BAD IDEA NO CLUE HOW TO COPY IT USING THE BASE POINTER. GO BACK TO INHERITING FROM DRAWABLE, FIGURE IT OUT.
+//TODO: TRIED ADDING SHAPE AS A PROPERTY OF GAMEOBJECT, BAD IDEA NO CLUE HOW TO COPY IT USING THE BASE POINTER. FIGURE IT OUT.
+// LOL YA I TRIED THAT TOO. COULDN'T DO IT.
 
 //Copy constructor does not copy parent child relationships
 GameObject::GameObject (const GameObject& obj) : _parent(nullptr), sf::Transformable(obj)
@@ -31,6 +32,7 @@ GameObject& GameObject::operator=(const GameObject& obj)
     setRotation(obj.getRotation());
     setScale(obj.getScale());
     setOrigin(obj.getOrigin());
+    
 	return *this;
 }
 

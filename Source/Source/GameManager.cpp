@@ -30,7 +30,7 @@ void GameManager::InitInstance()
     std::string name = "game";
     GameLayer* layer = gameObjectManager->CreateGameLayer(name, true, true);
     layer->objects.push_back(new Triangle());
-    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,300), true));
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300, 300), true));
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,0), false));
 }
 

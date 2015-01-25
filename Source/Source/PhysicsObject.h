@@ -20,7 +20,7 @@ public:
     PhysicsBody* body;
     bool isStatic = false;
     virtual void SetParent(GameObject* parent);
-    virtual void UpdateTransform(b2Body* box2DBody); //CHANGE THIS BACK TO NON-VIRTUAL
+    void UpdateTransform(b2Body* box2DBody);
 protected:
     PhysicsObject();
     PhysicsObject (const PhysicsObject& obj);

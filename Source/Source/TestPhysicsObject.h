@@ -21,8 +21,7 @@ public:
     TestPhysicsObject(sf::Vector2f position, bool isStatic);
     sf::ConvexShape* shape;
     virtual void Update();
-    virtual void Draw(sf::RenderWindow& window);
-    virtual void UpdateTransform(b2Body* box2DBody);
+    virtual void Draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__TestPhysicsObject__) */

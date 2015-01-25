@@ -11,10 +11,10 @@
 TestPhysicsObject::TestPhysicsObject():PhysicsObject(){
     shape = new sf::ConvexShape();
     shape->setPointCount(3);
-    shape->setPoint(2, sf::Vector2f(0,0));
-    shape->setPoint(1, sf::Vector2f(100,0));
-    shape->setPoint(0, sf::Vector2f(0, 100));
-    shape->setPosition(300, 300);
+    shape->setPoint(0, sf::Vector2f(0, 20));
+    shape->setPoint(1, sf::Vector2f(20, -20));
+    shape->setPoint(2, sf::Vector2f(-20, -20));
+    //shape->setPosition(300, 300);
     shape->setFillColor(sf::Color::Red);
     
     setPosition(300, 300);
@@ -24,17 +24,18 @@ TestPhysicsObject::TestPhysicsObject():PhysicsObject(){
     PhysicsManager::AddShape(*this, *shape);
 }
 
-//NOTE PHYSICS IS ALL FUCKED UP
+//NOTE PHYSICS IS Not ALL FUCKED UP anymore
 TestPhysicsObject::TestPhysicsObject(sf::Vector2f position, bool isStatic):PhysicsObject(){
     shape = new sf::ConvexShape();
     shape->setPointCount(3);
-    shape->setPoint(2, sf::Vector2f(0,0));
-    shape->setPoint(1, sf::Vector2f(100,0));
-    shape->setPoint(0, sf::Vector2f(0, 100));
-    shape->setPosition(position);
+    shape->setPoint(0, sf::Vector2f(0, 10));
+    shape->setPoint(1, sf::Vector2f(5, -5));
+    shape->setPoint(2, sf::Vector2f(-5, -5));
+    //shape->setPosition(0,0);
     shape->setFillColor(sf::Color::Red);
     
     setPosition(position);
+    setRotation(90);
 
     this->isStatic = isStatic;
     
@@ -45,19 +46,10 @@ void TestPhysicsObject::Update(){
     //shape->rotate(6);
 }
 
-void TestPhysicsObject::Draw(sf::RenderWindow& window){
-    window.draw(*shape);
+void TestPhysicsObject::Draw(sf::RenderTarget& window, sf::RenderStates& renderState)
+{
+    window.draw(*shape, renderState);
 }
 
-//THIS FUNCTION IS TEMPORARY.
-//THE ONLY REASON IT IS HERE IS BECAUSE SHAPES ARE NOT YET DRAWN RELATIVE TO THEIR BODIES
-void TestPhysicsObject::UpdateTransform(b2Body* box2DBody){
-    b2Vec2 origin = box2DBody->GetLocalCenter(); //Should we be updating origin?
-    b2Vec2 position = box2DBody->GetPosition();
-    float angle = box2DBody->GetAngle();
-    shape->setOrigin(origin.x, origin.y);
-    shape->setPosition(position.x, position.y);
-    shape->setRotation(angle);
-}
 
 
