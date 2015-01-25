@@ -20,8 +20,11 @@ void PhysicsDebugDraw::SetTarget(sf::RenderTarget* theTarget){
 void PhysicsDebugDraw::DrawSolidPolygon(const b2Vec2 *vertices, int32 vertexCount, const b2Color &color){
     sf::Vertex* sfVerts = new sf::Vertex[vertexCount];
     for(int32 i=0; i<vertexCount; ++i){
-        sfVerts[i].position = sf::Vector2f(vertices[i].x, vertices[i].y);
+        sfVerts[i].position.x = vertices[i].x;
+        sfVerts[i].position.y = vertices[i].y;
+        fprintf(stderr, "Number!: %d, %f\n", i, sfVerts[i].position.x);
         sfVerts[i].color = sf::Color::Blue;
     }
     target->draw(sfVerts, vertexCount, sf::Triangles);
+    delete [] sfVerts;
 }

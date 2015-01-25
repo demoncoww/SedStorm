@@ -5,7 +5,7 @@ std::vector<PhysicsBody*> PhysicsManager::bodies;
 
 PhysicsManager::PhysicsManager()
 {
-	b2Vec2 gravity(0.0f, 9.8f);
+	b2Vec2 gravity(0.0f, 9.8f); //Should be 9.8
 	world = new b2World(gravity);
 }
 
@@ -33,7 +33,9 @@ void PhysicsManager::Update()
 	const int32 velocityIterations = 8;   //how strongly to correct velocity
 	const int32 positionIterations = 3;   //how strongly to correct position
     
+    debugDrawer->GetTarget()->clear();
     world->DrawDebugData();
+    dynamic_cast<sf::RenderWindow*>(debugDrawer->GetTarget())->display();
     
 	world->Step(FRAMETIME, velocityIterations, positionIterations);
     for(unsigned int i=0; i<bodies.size(); ++i){

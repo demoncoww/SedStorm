@@ -18,6 +18,7 @@ class PhysicsDebugDraw : public b2Draw
 public:
     PhysicsDebugDraw(sf::RenderTarget* theTarget);
     void SetTarget(sf::RenderTarget* theTarget);
+    inline sf::RenderTarget* GetTarget(){ return target;}
     virtual void DrawPolygon(const b2Vec2* vertices, int32 vertexCount, const b2Color& color) {}
     virtual void DrawSolidPolygon(const b2Vec2* vertices, int32 vertexCount, const b2Color& color);
     virtual void DrawCircle(const b2Vec2& center, float32 radius, const b2Color& color) {}
