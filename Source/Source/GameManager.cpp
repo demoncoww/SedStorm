@@ -27,23 +27,25 @@ void GameManager::InitInstance()
     //Insert test triangle into the gameObjectManager
     std::string name = "game";
     GameLayer* layer = gameObjectManager->createGameLayer(name, true, true);
-	Triangle* triangle1 = new Triangle;
+    Triangle* triangle1 = new Triangle;
+    triangle1->setPosition(sf::Vector2f(400, 300));
+    triangle1->shape->setFillColor(sf::Color::Green);
 
 	Triangle* triangle2 = new Triangle;
-	triangle2->rotate(30);
-	triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(50, 50));
+	//triangle2->rotate(10);
+	triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(20, 20));
 	triangle2->shape->setFillColor(sf::Color(250, 100, 50));
 	triangle2->setParent(triangle1);
 
 	Triangle* triangle3 = new Triangle;
-	triangle3->rotate(60);
-	triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(25, 50));
+	//triangle3->rotate(10);
+    triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(20, 20));
 	triangle3->shape->setFillColor(sf::Color(50, 100, 250));
 	triangle3->setParent(triangle2);
 
 	Triangle* triangle4 = new Triangle;
-	triangle4->rotate(90);
-	triangle4->setPosition(triangle4->getPosition() + sf::Vector2f(75, 75));
+    //triangle4->rotate(10);
+    triangle4->setPosition(triangle4->getPosition() + sf::Vector2f(20, 20));
 	triangle4->shape->setFillColor(sf::Color(150, 150, 150));
 	triangle4->setParent(triangle3);
 

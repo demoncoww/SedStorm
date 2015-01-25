@@ -15,7 +15,8 @@
 #include <vector>
 
 
-class GameObject: public sf::Transformable{
+class GameObject: public virtual sf::Transformable
+{
 friend class GameObjectManager;
 public:
     GameObject& operator=(const GameObject& obj);

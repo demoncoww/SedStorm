@@ -34,7 +34,7 @@ GameObject& GameObject::operator=(const GameObject& obj)
 	return *this;
 }
 
-bool GameObject::IsTopLevel(){
+bool GameObject::IsTopLevel() {
 	return (_parent == nullptr);
 }
 
