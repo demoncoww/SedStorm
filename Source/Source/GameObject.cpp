@@ -31,15 +31,21 @@ GameObject& GameObject::operator=(const GameObject& obj)
     setRotation(obj.getRotation());
     setScale(obj.getScale());
     setOrigin(obj.getOrigin());
+	return *this;
 }
 
-void GameObject::setParent(GameObject& parent){
-    _parent = &parent;
-    parent._children.push_back(this);
+bool GameObject::IsTopLevel() {
+	return (_parent == nullptr);
+}
+
+
+void GameObject::setParent(GameObject* parent){
+    _parent = parent;
+    parent->_children.push_back(this);
 }
 
 //Virtual functions
-void GameObject::draw(sf::RenderWindow& window)
+void GameObject::draw(sf::RenderTarget& target, sf::RenderStates& renderState)
 {
 }
 

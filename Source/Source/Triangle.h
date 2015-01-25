@@ -11,15 +11,16 @@
 
 #include <stdio.h>
 #include "GameObject.h"
+#include <Thor/Math.hpp>
 
 
 class Triangle: public GameObject
 {
 public:
     Triangle();
-    sf::ConvexShape* shape;
+    sf::ConvexShape* shape; // we aren't using the transformable base class of shape
     virtual void update();
-    virtual void draw(sf::RenderWindow& window);
+	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__Triangle__) */

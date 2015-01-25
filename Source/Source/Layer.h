@@ -13,6 +13,7 @@
 #include <vector>
 #include "GameObject.h"
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
 //#include <GameObjectManager.h>
 
 class Layer{
@@ -32,6 +33,7 @@ protected:
     Layer(bool isVisible, bool isActive);
     bool _isVisible; //Should this layers draw function be called
     bool _isActive; //Should this layers update function be called
+	void DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__Layer__) */
