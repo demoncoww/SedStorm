@@ -17,6 +17,7 @@ public:
     void InitInstance(void);
 	void Update(void);
     void EnableDebug(sf::RenderTarget* target);
+    void DrawDebugData();
     static PhysicsBody* AddShape(PhysicsObject& shapeOwner);
 	// takes a ConcaveShape, splits it into multiple fixtures
 	// creates a body for the fixtures, and places the body in the world
@@ -39,6 +40,5 @@ public:
 private:
     PhysicsDebugDraw* debugDrawer;
     static b2World* world;
-    static std::vector<PhysicsBody*> bodies;
 };
 #endif // _PHYSICSMANAGER
