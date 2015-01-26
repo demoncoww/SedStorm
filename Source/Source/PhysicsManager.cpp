@@ -27,7 +27,9 @@ void PhysicsManager::Update()
 	const float FRAMETIME = 1.0f / 60; // target number of seconds per frame
 	const int32 velocityIterations = 8;   //how strongly to correct velocity
 	const int32 positionIterations = 3;   //how strongly to correct position
+    // go through all physics bodies, updating position and rotation from GameObjects
 	world->Step(FRAMETIME, velocityIterations, positionIterations);
+    // go trhough all GameObjects, updating position and rotation from physics bodies
 }
 
 // converts a SFML shape into a Box2D polygon shape
@@ -47,8 +49,11 @@ b2PolygonShape PhysicsManager::ShapeToPolygon(const sf::ConvexShape& shape) {
 void PhysicsManager::AddShapeToWorld(const sf::ConvexShape& shape) {
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(0.0f, 4.0f);
+    sf::Vector2f pos = shape.getPosition();
+    bodyDef.position.Set(pos.x, pos.y); // shapes position is relative to this
+    bodyDef.angle = thor::toRadian(shape.getRotation);
     b2Body* body = world->CreateBody(&bodyDef);
+    body->SetUserData(0); // store the pointer to the GameObject here
 
     b2PolygonShape polygon = ShapeToPolygon(shape);
 
@@ -58,3 +63,5 @@ void PhysicsManager::AddShapeToWorld(const sf::ConvexShape& shape) {
     fixtureDef.friction = 0.3f;
     body->CreateFixture(&fixtureDef);
 }
+
+// Box2D tutorials at http://www.iforce2d.net/b2dtut/bodies

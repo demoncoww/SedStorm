@@ -24,4 +24,3 @@ void Triangle::update() {
 void Triangle::draw(sf::RenderTarget& window, sf::RenderStates& renderState) {
     window.draw(*this, renderState);
 }
-

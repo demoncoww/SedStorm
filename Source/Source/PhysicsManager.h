@@ -2,6 +2,7 @@
 #define _PHYSICSMANAGER
 #include <Box2D/Box2D.h>
 #include <Thor/Shapes.hpp>
+#include <Thor/Math.hpp>
 
 class PhysicsManager
 {
