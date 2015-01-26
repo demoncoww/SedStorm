@@ -75,6 +75,12 @@ void GameManager::InitInstance()
     layer->objects.push_back(new Triangle());
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300, 300), true));
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,0), false));
+    std::vector<sf::Vector2f> points;
+    points.push_back(sf::Vector2f(-50.0f,-50.0f));
+    points.push_back(sf::Vector2f(-50.0f, 50.0f));
+    points.push_back(sf::Vector2f( 50.0f, 50.0f));
+    points.push_back(sf::Vector2f( 50.0f,-50.0f));
+    layer->objects.push_back(new Sliceable(sf::Vector2f(300,200), points, false));
 }
 
 void GameManager::MainLoop()
