@@ -1,0 +1,22 @@
+# CMake generation dependency list for this directory.
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/CMakeLists.txt
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/CMakeFiles/3.0.2/CMakeSystem.cmake
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/CMakeFiles/3.0.2/CMakeCCompiler.cmake
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/CMakeFiles/3.0.2/CMakeCXXCompiler.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeGenericSystem.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/Platform/Windows.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/Platform/WindowsPaths.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeCInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/Platform/Windows-MSVC.cmake
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/CMakeFiles/3.0.2/CMakeRCCompiler.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeRCInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeCXXInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CMakeCommonLanguageInclude.cmake
+G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/cmake/Config.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CheckTypeSize.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.0/Modules/CheckIncludeFile.cmake

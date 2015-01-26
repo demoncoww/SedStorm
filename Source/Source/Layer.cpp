@@ -24,8 +24,8 @@ void Layer::DrawObjects(sf::RenderWindow& window) {
     for(unsigned int i=0; i<objects.size(); i++){
 		if (objects[i]->IsTopLevel()) {
 			sf::RenderStates renderState = sf::RenderStates::Default; // identity matrix
-            renderState.transform *= objects[i]->getTransform(); // as we are doing this here, make sure that any derived draw() functions pass in a shape with an identity matrix in its Transformable
-			objects[i]->Draw(window, renderState); // draw parent with its local transformation applied
+			objects[i]->Draw(window, renderState); // draw parent
+            renderState.transform *= objects[i]->getTransform(); // apply parents transform before sending to children
 			DrawChildren(window, objects[i], renderState); // send window, parent, and parent transformation
 		}
     }
@@ -33,9 +33,11 @@ void Layer::DrawObjects(sf::RenderWindow& window) {
 
 void Layer::DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState) {
 	for (auto& child : parent->GetChildren()) {
-        renderState.transform *= child->getTransform();
-		child->Draw(target, renderState);
+		child->Draw(target, renderState); // draw child
+        sf::Transform oldTransform = renderState.transform; // save transform
+        renderState.transform *= child->getTransform(); // apply childs's tranform before sending to next child
 		DrawChildren(target, child, renderState);
+        renderState.transform = oldTransform; // restore transform in case there are more than one child
 	}
 }
 

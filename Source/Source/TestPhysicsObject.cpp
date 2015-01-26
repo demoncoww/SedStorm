@@ -9,46 +9,44 @@
 #include "TestPhysicsObject.h"
 
 TestPhysicsObject::TestPhysicsObject():PhysicsObject(){
-    shape = new sf::ConvexShape();
-    shape->setPointCount(3);
-    shape->setPoint(0, sf::Vector2f(0, 20));
-    shape->setPoint(1, sf::Vector2f(20, -20));
-    shape->setPoint(2, sf::Vector2f(-20, -20));
-    //shape->setPosition(300, 300);
-    shape->setFillColor(sf::Color::Red);
+    setPointCount(3);
+    setPoint(0, sf::Vector2f(0, 20));
+    setPoint(1, sf::Vector2f(20, -20));
+    setPoint(2, sf::Vector2f(-20, -20));
+    //setPosition(300, 300);
+    setFillColor(sf::Color::Red);
     
     setPosition(300, 300);
     
     isStatic = false;
     
-    PhysicsManager::AddShape(*this, *shape);
+    PhysicsManager::AddShape(*this);
 }
 
 //NOTE PHYSICS IS Not ALL FUCKED UP anymore
 TestPhysicsObject::TestPhysicsObject(sf::Vector2f position, bool isStatic):PhysicsObject(){
-    shape = new sf::ConvexShape();
-    shape->setPointCount(3);
-    shape->setPoint(0, sf::Vector2f(0, 10));
-    shape->setPoint(1, sf::Vector2f(5, -5));
-    shape->setPoint(2, sf::Vector2f(-5, -5));
-    //shape->setPosition(0,0);
-    shape->setFillColor(sf::Color::Red);
+    setPointCount(3);
+    setPoint(0, sf::Vector2f(0, 10));
+    setPoint(1, sf::Vector2f(5, -5));
+    setPoint(2, sf::Vector2f(-5, -5));
+    //setPosition(0,0);
+    setFillColor(sf::Color::Red);
     
     setPosition(position);
     setRotation(90);
 
     this->isStatic = isStatic;
     
-    PhysicsManager::AddShape(*this, *shape);
+    PhysicsManager::AddShape(*this);
 }
 
 void TestPhysicsObject::Update(){
-    //shape->rotate(6);
+    //rotate(6);
 }
 
 void TestPhysicsObject::Draw(sf::RenderTarget& window, sf::RenderStates& renderState)
 {
-    window.draw(*shape, renderState);
+    window.draw(*this, renderState);
 }
 
 

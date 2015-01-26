@@ -44,7 +44,8 @@ class Texture;
 ///        own transformations, color, etc.
 ///
 ////////////////////////////////////////////////////////////
-class SFML_GRAPHICS_API Sprite : public Drawable, public Transformable
+// CHANGED inheritance of Transformable to virtual
+class SFML_GRAPHICS_API Sprite : public Drawable, public virtual Transformable
 {
 public:
 

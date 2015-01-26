@@ -38,7 +38,8 @@ namespace sf
 /// \brief Specialized shape representing a rectangle
 ///
 ////////////////////////////////////////////////////////////
-class SFML_GRAPHICS_API RectangleShape : public Shape
+// CHANGED inheritance of Shape to virtual
+class SFML_GRAPHICS_API RectangleShape : public virtual Shape
 {
 public:
 

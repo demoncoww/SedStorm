@@ -1,0 +1,3 @@
+G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/CMakeFiles/ALL_BUILD.dir
+G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/CMakeFiles/ZERO_CHECK.dir
+G:/GitHub/sedimentalstorm/Source/3rdParty/Thor/build/src/CMakeFiles/thor.dir

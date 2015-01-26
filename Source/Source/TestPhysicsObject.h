@@ -14,12 +14,11 @@
 #include "PhysicsManager.h"
 
 
-class TestPhysicsObject: public PhysicsObject
+class TestPhysicsObject: public virtual PhysicsObject, public virtual sf::ConvexShape
 {
 public:
     TestPhysicsObject();
     TestPhysicsObject(sf::Vector2f position, bool isStatic);
-    sf::ConvexShape* shape;
     virtual void Update();
     virtual void Draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };

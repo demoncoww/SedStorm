@@ -45,7 +45,8 @@ namespace thor
 /// @brief Drawable arrow class
 /// @details Arrows behave very similar to lines. They can be used to visualize vectors. This class
 ///  inherits sf::Drawable and sf::Transformable.
-class THOR_API Arrow : public sf::Drawable, public sf::Transformable
+// CHANGED inheritance of Transformable to virtual
+class THOR_API Arrow : public sf::Drawable, virtual public sf::Transformable
 {
 	// ---------------------------------------------------------------------------------------------------------------------------
 	// Public types

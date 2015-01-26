@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ActionOperations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Affectors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Arrow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\BigSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\BigTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\CallbackTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ColorAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ColorGradient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ConcaveShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Distributions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Emitters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\FadeAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\FrameAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\InputNames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Joystick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ParticleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Shapes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\StopWatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\ToString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Triangulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\Trigonometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\UniformAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\GitHub\sedimentalstorm\Source\3rdParty\Thor\Source\Thor-master-5Jan2015\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{42A1DF22-E4B3-4016-925B-F812990AB5A9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

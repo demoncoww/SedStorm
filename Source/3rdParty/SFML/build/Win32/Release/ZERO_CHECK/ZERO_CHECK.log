@@ -1,0 +1,17 @@
+﻿Build started 1/25/2015 12:56:47 PM.
+     1>Project "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\ZERO_CHECK.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/System/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/Main/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/Window/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/Network/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/Graphics/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/src/SFML/Audio/CMakeFiles/generate.stamp is up-to-date.
+     1>Done Building Project "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\ZERO_CHECK.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.19

@@ -1,0 +1,74 @@
+﻿Build started 1/25/2015 12:56:20 PM.
+     1>Project "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Graphics\sfml-graphics.vcxproj" on node 4 (Rebuild target(s)).
+     1>CustomBuild:
+         Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/src/SFML/Graphics/CMakeLists.txt
+         CMake does not need to re-run because G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Graphics\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\include" /I"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src" /I"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers" /I"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\jpeg" /I"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\headers\libfreetype\windows" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D GLEW_STATIC /D STBI_FAILURE_USERMSG /D "CMAKE_INTDIR=\"Debug\"" /D SFML_GRAPHICS_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /GR /Fo"sfml-graphics.dir\Debug\\" /Fd"sfml-graphics.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\BlendMode.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Color.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Font.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\GLCheck.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\GLExtensions.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Image.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\ImageLoader.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderStates.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTexture.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTarget.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderWindow.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Shader.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Texture.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\TextureSaver.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Transform.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Transformable.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\View.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Vertex.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Shape.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\CircleShape.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RectangleShape.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\ConvexShape.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Sprite.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\Text.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\VertexArray.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImpl.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImplFBO.cpp" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\src\SFML\Graphics\RenderTextureImplDefault.cpp"
+         BlendMode.cpp
+         Color.cpp
+         Font.cpp
+         GLCheck.cpp
+         GLExtensions.cpp
+         Image.cpp
+         ImageLoader.cpp
+         RenderStates.cpp
+         RenderTexture.cpp
+         RenderTarget.cpp
+         RenderWindow.cpp
+         Shader.cpp
+         Texture.cpp
+         TextureSaver.cpp
+         Transform.cpp
+         Transformable.cpp
+         View.cpp
+         Vertex.cpp
+         Shape.cpp
+         CircleShape.cpp
+         Generating Code...
+         Compiling...
+         RectangleShape.cpp
+         ConvexShape.cpp
+         Sprite.cpp
+         Text.cpp
+         VertexArray.cpp
+         RenderTextureImpl.cpp
+         RenderTextureImplFBO.cpp
+         RenderTextureImplDefault.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\sfml-graphics-d-2.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "..\..\..\lib\Debug\sfml-window-d.lib" "..\..\..\lib\Debug\sfml-system-d.lib" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\glew.lib" opengl32.lib "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\freetype.lib" "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\Source\SFML-2.2\extlibs\libs-msvc\x86\jpeg.lib" winmm.lib gdi32.lib opengl32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Debug/sfml-graphics-d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Debug/sfml-graphics-d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug /DLL "sfml-graphics.dir\Debug\BlendMode.obj"
+         "sfml-graphics.dir\Debug\Color.obj"
+         "sfml-graphics.dir\Debug\Font.obj"
+         "sfml-graphics.dir\Debug\GLCheck.obj"
+         "sfml-graphics.dir\Debug\GLExtensions.obj"
+         "sfml-graphics.dir\Debug\Image.obj"
+         "sfml-graphics.dir\Debug\ImageLoader.obj"
+         "sfml-graphics.dir\Debug\RenderStates.obj"
+         "sfml-graphics.dir\Debug\RenderTexture.obj"
+         "sfml-graphics.dir\Debug\RenderTarget.obj"
+         "sfml-graphics.dir\Debug\RenderWindow.obj"
+         "sfml-graphics.dir\Debug\Shader.obj"
+         "sfml-graphics.dir\Debug\Texture.obj"
+         "sfml-graphics.dir\Debug\TextureSaver.obj"
+         "sfml-graphics.dir\Debug\Transform.obj"
+         "sfml-graphics.dir\Debug\Transformable.obj"
+         "sfml-graphics.dir\Debug\View.obj"
+         "sfml-graphics.dir\Debug\Vertex.obj"
+         "sfml-graphics.dir\Debug\Shape.obj"
+         "sfml-graphics.dir\Debug\CircleShape.obj"
+         "sfml-graphics.dir\Debug\RectangleShape.obj"
+         "sfml-graphics.dir\Debug\ConvexShape.obj"
+         "sfml-graphics.dir\Debug\Sprite.obj"
+         "sfml-graphics.dir\Debug\Text.obj"
+         "sfml-graphics.dir\Debug\VertexArray.obj"
+         "sfml-graphics.dir\Debug\RenderTextureImpl.obj"
+         "sfml-graphics.dir\Debug\RenderTextureImplFBO.obj"
+         "sfml-graphics.dir\Debug\RenderTextureImplDefault.obj"
+            Creating library G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Debug/sfml-graphics-d.lib and object G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/build/lib/Debug/sfml-graphics-d.exp
+         sfml-graphics.vcxproj -> G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\lib\Debug\sfml-graphics-d-2.dll
+     1>Done Building Project "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\src\SFML\Graphics\sfml-graphics.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.74

@@ -38,7 +38,8 @@ namespace sf
 /// \brief Specialized shape representing a circle
 ///
 ////////////////////////////////////////////////////////////
-class SFML_GRAPHICS_API CircleShape : public Shape
+// CHANGED inheritance of Shape to virtual
+class SFML_GRAPHICS_API CircleShape : public virtual Shape
 {
 public:
 

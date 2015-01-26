@@ -1,0 +1,11 @@
+﻿Build started 1/25/2015 12:56:32 PM.
+     1>Project "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\ALL_BUILD.vcxproj" on node 3 (Rebuild target(s)).
+     1>CustomBuild:
+         Building Custom Rule G:/GitHub/sedimentalstorm/Source/3rdParty/SFML/Source/SFML-2.2/CMakeLists.txt
+         CMake does not need to re-run because G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\CMakeFiles\generate.stamp is up-to-date.
+         Build all projects
+     1>Done Building Project "G:\GitHub\sedimentalstorm\Source\3rdParty\SFML\build\ALL_BUILD.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.19
