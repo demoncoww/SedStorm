@@ -22,6 +22,7 @@ public:
     bool isStatic = false;
     virtual void SetParent(GameObject* parent);
     void UpdateTransform(b2Body* box2DBody);
+    virtual void Draw(sf::RenderTarget& target, sf::RenderStates& renderState);
 protected:
     PhysicsObject();
     PhysicsObject (const PhysicsObject& obj);

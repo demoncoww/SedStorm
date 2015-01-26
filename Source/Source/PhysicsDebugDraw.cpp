@@ -23,7 +23,8 @@ void PhysicsDebugDraw::DrawSolidPolygon(const b2Vec2 *vertices, int32 vertexCoun
         sfVerts[i].position.x = vertices[i].x;
         sfVerts[i].position.y = vertices[i].y;
         fprintf(stderr, "Number!: %d, %f\n", i, sfVerts[i].position.x);
-        sfVerts[i].color = sf::Color::Blue;
+        //b2colors range from 0-1 while sf::color ranges from 0-255
+        sfVerts[i].color = sf::Color(color.r*255, color.g*255, color.b*255, 128);
     }
     target->draw(sfVerts, vertexCount, sf::Triangles);
 }

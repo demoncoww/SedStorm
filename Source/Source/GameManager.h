@@ -23,6 +23,7 @@
 #include "GameObjectManager.h"
 #include "Triangle.h"
 #include "TestPhysicsObject.h"
+#include "Sliceable.h"
 
 class GameManager
 {

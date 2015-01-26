@@ -32,5 +32,10 @@ void PhysicsObject::UpdateTransform(b2Body* box2DBody){
     setRotation(angle);
 }
 
+void PhysicsObject::Draw(sf::RenderTarget& target, sf::RenderStates& renderState){
+    target.draw(*this);
+}
+
+
 
 

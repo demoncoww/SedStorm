@@ -1,7 +1,6 @@
 #include "PhysicsManager.h"
 
 b2World* PhysicsManager::world;
-std::vector<PhysicsBody*> PhysicsManager::bodies;
 
 PhysicsManager::PhysicsManager()
 {
@@ -18,10 +17,10 @@ void PhysicsManager::InitInstance()
 {
     // create the ground body
     b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, -10.0f);
+    groundBodyDef.position.Set(300.0f, 600.0f);
     b2Body* groundBody = world->CreateBody(&groundBodyDef);
     b2PolygonShape groundBox;
-    groundBox.SetAsBox(50.0f, 10.0f);
+    groundBox.SetAsBox(600.0f, 1.0f);
     groundBody->CreateFixture(&groundBox, 0.0f);
 }
 
@@ -34,19 +33,27 @@ void PhysicsManager::EnableDebug(sf::RenderTarget* target){
     }
 }
 
+void PhysicsManager::DrawDebugData(){
+    if(debugDrawer != nullptr){
+        world->DrawDebugData();
+    }
+}
+
 void PhysicsManager::Update()
 {
 	const float FRAMETIME = 1.0f / 60; // target number of seconds per frame
 	const int32 velocityIterations = 8;   //how strongly to correct velocity
 	const int32 positionIterations = 3;   //how strongly to correct position
     
-    //debugDrawer->GetTarget()->clear();
-    //world->DrawDebugData();
-    //dynamic_cast<sf::RenderWindow*>(debugDrawer->GetTarget())->display();
-    
 	world->Step(FRAMETIME, velocityIterations, positionIterations);
-    for(unsigned int i=0; i<bodies.size(); ++i){
-        bodies[i]->UpdateParentTransform();
+    
+    b2Body* body =  world->GetBodyList();
+    while ( body != nullptr ) {
+        PhysicsBody* physicsBody = static_cast<PhysicsBody*> (body->GetUserData());
+        if(physicsBody != nullptr){
+            physicsBody->UpdateParentTransform();
+        }
+        body = body->GetNext();
     }
 }
 
@@ -79,7 +86,7 @@ PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner){
     fixtureDef.density = 1;
     physicsBody->body->CreateFixture(&fixtureDef);
     
-    bodies.push_back(physicsBody);
+    physicsBody->body->SetUserData((void *)physicsBody);
     
     return physicsBody;
 }

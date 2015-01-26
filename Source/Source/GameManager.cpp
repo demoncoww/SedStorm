@@ -1,5 +1,8 @@
 #include "GameManager.h"
 
+//UNCOMMENT THE FOLLOWING LINE TO ENABLE PHYSICS DEBUG
+//#define PHYSICS_DEBUG
+
 GameManager::GameManager()
 {
 	gameWindow = new sf::RenderWindow;
@@ -19,10 +22,12 @@ GameManager::~GameManager()
 void GameManager::InitInstance()
 {
 	gameWindow->create(sf::VideoMode(800, 600, 32), "Sedimental Storm");
-	renderManager->SetGameWindow(gameWindow);
-    renderManager->SetGameObjectManager(gameObjectManager);
-	renderManager->InitInstance();
 	physicsManager->InitInstance();
+    
+    renderManager->SetGameWindow(gameWindow);
+    renderManager->SetPhysicsManager(physicsManager);
+    renderManager->SetGameObjectManager(gameObjectManager);
+    renderManager->InitInstance();
     
 	std::string name = "game";
 	GameLayer* layer = gameObjectManager->CreateGameLayer(name, true, true);
@@ -61,12 +66,21 @@ void GameManager::InitInstance()
     //physicsManager->AddShapeToWorld(*triangle1);
     //layer->objects.push_back(triangle1);
 
-	//physicsManager->EnableDebug(gameWindow);
+#ifdef PHYSICS_DEBUG
+    //ENABLE DEBUG
+	physicsManager->EnableDebug(gameWindow);
+#endif
     
     //Insert test triangle into the gameObjectManager
     layer->objects.push_back(new Triangle());
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300, 300), true));
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,0), false));
+    std::vector<sf::Vector2f> points;
+    points.push_back(sf::Vector2f(-50.0f,-50.0f));
+    points.push_back(sf::Vector2f(-50.0f, 50.0f));
+    points.push_back(sf::Vector2f( 50.0f, 50.0f));
+    points.push_back(sf::Vector2f( 50.0f,-50.0f));
+    layer->objects.push_back(new Sliceable(sf::Vector2f(300,200), points, false));
 }
 
 void GameManager::MainLoop()
