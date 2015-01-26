@@ -88,7 +88,6 @@ void GameManager::MainLoop()
 		//printf("Processing Messages\n");
 		currentTime = clock.getElapsedTime().asSeconds();
 		if (currentTime >= FRAMETIME * frame) {
-			// physics simulation
 			timeSinceLastUpdate = currentTime - lastFrameTime;
 			if (timeSinceLastUpdate > FRAMETIME * 2.0f) {
 				frame = (int)(currentTime / FRAMETIME);
@@ -101,12 +100,13 @@ void GameManager::MainLoop()
 			++frame;
 			lastFrameTime = currentTime;
 			//printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
-            //Run game logic:
-            gameObjectManager->UpdateLayers();
             
+            //Run game logic:
+            gameObjectManager->UpdateLayers(); // are we sure we only want to do this only on every frame?
+			// run physics simulation
+            physicsManager->Update();
             // render scene
 			renderManager->Draw();
-			physicsManager->Update();
 		}
 	}
 }

@@ -24,7 +24,7 @@
 #include <string>
 using namespace std;
 
-namespace geometry
+namespace Geometry
 {
 	inline float det(float x1, float y1, float x2, float y2, float x3, float y3);
 	bool isOnLine(float px, float py, float x1, float y1, float x2, float y2);
@@ -32,6 +32,8 @@ namespace geometry
 	bool isOnSegment(float px, float py, float x1, float y1, float x2, float y2);
 	b2Vec2 hitRay(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
 	b2Vec2 hitSegment(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
+    vector<vector<b2Vec2>> calcShapes(vector<b2Vec2>& verts);
+    void err(void);
 
 	/**
 	* Separates a non-convex polygon into convex polygons and adds them as fixtures to the <code>body</code> parameter.<br/>
@@ -51,7 +53,7 @@ namespace geometry
 	* @see b2PolygonShape.SetAsVector()
 	* @see b2Fixture
 	* */
-	void Separate(b2World& world, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef, static vector<b2Vec2>& vertices, unsigned int scale = 30) {
+	void Separate(b2World& world, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef, vector<b2Vec2>& vertices, unsigned int scale = 30) {
 		int n = vertices.size();
 		vector<b2Vec2> vec;
 		b2Vec2 *b2Points = (b2Vec2*)alloca(sizeof(b2Vec2) * vertices.size());

@@ -5,7 +5,7 @@ std::vector<PhysicsBody*> PhysicsManager::bodies;
 
 PhysicsManager::PhysicsManager()
 {
-	b2Vec2 gravity(0.0f, 9.8f); //Should be 9.8
+	b2Vec2 gravity(0.0f, 9.8f);
 	world = new b2World(gravity);
 }
 
