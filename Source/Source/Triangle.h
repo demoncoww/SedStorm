@@ -19,8 +19,8 @@ class Triangle: public GameObject
 public:
     Triangle();
     sf::ConvexShape* shape; // we aren't using the transformable base class of shape
-    virtual void update();
-	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
+    virtual void Update();
+	virtual void Draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__Triangle__) */

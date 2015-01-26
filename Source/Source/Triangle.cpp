@@ -18,8 +18,8 @@ Triangle::Triangle(){
     shape->setFillColor(sf::Color::Green);
 }
 
-void Triangle::update() {
-    rotate(0.5);
+void Triangle::Update(){
+    shape->rotate(3);
 }
 
 //sf::Vector2f deltaTransformPoint(sf::Transform matrix, sf::Vector2f point) {
@@ -47,7 +47,7 @@ void Triangle::update() {
 //    shape.setRotation(skewX);
 //}
 
-void Triangle::draw(sf::RenderTarget& window, sf::RenderStates& renderState) {
+void Triangle::Draw(sf::RenderTarget& window, sf::RenderStates& renderState) {
     // we can't copy renderstates transform into shapes transform :(
     // decomposeMatrix(renderState.transform, *shape);
     window.draw(*shape, renderState);

@@ -8,33 +8,33 @@
 
 #include "Layer.h"
 
-Layer::Layer(): objects(0), _isVisible(true), _isActive(true)
+Layer::Layer(): objects(0), isVisible(true), isActive(true)
 {}
 
-Layer::Layer(bool isVisible, bool isActive): objects(0), _isVisible(isVisible), _isActive(isActive)
+Layer::Layer(bool isVisible, bool isActive): objects(0), isVisible(isVisible), isActive(isActive)
 {}
 
-void Layer::updateObjects(){
+void Layer::UpdateObjects(){
     for(unsigned int i=0; i<objects.size(); i++){
-        objects[i]->update();
+        objects[i]->Update();
     }
 }
 
-void Layer::drawObjects(sf::RenderWindow& window) {
+void Layer::DrawObjects(sf::RenderWindow& window) {
     for(unsigned int i=0; i<objects.size(); i++){
 		if (objects[i]->IsTopLevel()) {
 			sf::RenderStates renderState = sf::RenderStates::Default; // identity matrix
             renderState.transform *= objects[i]->getTransform(); // as we are doing this here, make sure that any derived draw() functions pass in a shape with an identity matrix in its Transformable
-			objects[i]->draw(window, renderState); // draw parent with its local transformation applied
+			objects[i]->Draw(window, renderState); // draw parent with its local transformation applied
 			DrawChildren(window, objects[i], renderState); // send window, parent, and parent transformation
 		}
     }
 }
 
 void Layer::DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState) {
-	for (auto& child : parent->getChildren()) {
+	for (auto& child : parent->GetChildren()) {
         renderState.transform *= child->getTransform();
-		child->draw(target, renderState);
+		child->Draw(target, renderState);
 		DrawChildren(target, child, renderState);
 	}
 }

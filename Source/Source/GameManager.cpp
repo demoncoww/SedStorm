@@ -24,35 +24,14 @@ void GameManager::InitInstance()
 	renderManager->InitInstance();
 	physicsManager->InitInstance();
     
+    physicsManager->EnableDebug(gameWindow);
+    
     //Insert test triangle into the gameObjectManager
     std::string name = "game";
-    GameLayer* layer = gameObjectManager->createGameLayer(name, true, true);
-    Triangle* triangle1 = new Triangle;
-    triangle1->setPosition(sf::Vector2f(400, 300));
-    triangle1->shape->setFillColor(sf::Color::Green);
-
-	Triangle* triangle2 = new Triangle;
-	//triangle2->rotate(10);
-	triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(20, 20));
-	triangle2->shape->setFillColor(sf::Color(250, 100, 50));
-	triangle2->setParent(triangle1);
-
-	Triangle* triangle3 = new Triangle;
-	//triangle3->rotate(10);
-    triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(20, 20));
-	triangle3->shape->setFillColor(sf::Color(50, 100, 250));
-	triangle3->setParent(triangle2);
-
-	Triangle* triangle4 = new Triangle;
-    //triangle4->rotate(10);
-    triangle4->setPosition(triangle4->getPosition() + sf::Vector2f(20, 20));
-	triangle4->shape->setFillColor(sf::Color(150, 150, 150));
-	triangle4->setParent(triangle3);
-
-	layer->objects.push_back(triangle1);
-	layer->objects.push_back(triangle2);
-	layer->objects.push_back(triangle3);
-	layer->objects.push_back(triangle4);
+    GameLayer* layer = gameObjectManager->CreateGameLayer(name, true, true);
+    layer->objects.push_back(new Triangle());
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300, 300), true));
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,0), false));
 }
 
 void GameManager::MainLoop()
@@ -88,7 +67,7 @@ void GameManager::MainLoop()
 			lastFrameTime = currentTime;
 			//printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
             //Run game logic:
-            gameObjectManager->updateLayers();
+            gameObjectManager->UpdateLayers();
             
             // render scene
 			renderManager->Draw();
