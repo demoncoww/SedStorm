@@ -8,23 +8,23 @@
 
 #include "Layer.h"
 
-Layer::Layer(): objects(0), _isVisible(true), _isActive(true)
+Layer::Layer(): objects(0), isVisible(true), isActive(true)
 {}
 
-Layer::Layer(bool isVisible, bool isActive): objects(0), _isVisible(isVisible), _isActive(isActive)
+Layer::Layer(bool isVisible, bool isActive): objects(0), isVisible(isVisible), isActive(isActive)
 {}
 
-void Layer::updateObjects(){
+void Layer::UpdateObjects(){
     for(unsigned int i=0; i<objects.size(); i++){
-        objects[i]->update();
+        objects[i]->Update();
     }
 }
 
-void Layer::drawObjects(sf::RenderWindow& window) {
+void Layer::DrawObjects(sf::RenderWindow& window) {
     for(unsigned int i=0; i<objects.size(); i++){
 		if (objects[i]->IsTopLevel()) {
 			sf::RenderStates renderState = sf::RenderStates::Default; // identity matrix
-			objects[i]->draw(window, renderState); // draw parent
+			objects[i]->Draw(window, renderState); // draw parent
             renderState.transform *= objects[i]->getTransform(); // apply parents transform before sending to children
 			DrawChildren(window, objects[i], renderState); // send window, parent, and parent transformation
 		}
@@ -32,8 +32,8 @@ void Layer::drawObjects(sf::RenderWindow& window) {
 }
 
 void Layer::DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState) {
-	for (auto& child : parent->getChildren()) {
-		child->draw(target, renderState); // draw child
+	for (auto& child : parent->GetChildren()) {
+		child->Draw(target, renderState); // draw child
         sf::Transform oldTransform = renderState.transform; // save transform
         renderState.transform *= child->getTransform(); // apply childs's tranform before sending to next child
 		DrawChildren(target, child, renderState);

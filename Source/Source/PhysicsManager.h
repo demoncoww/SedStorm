@@ -3,21 +3,25 @@
 #include <Box2D/Box2D.h>
 #include <Thor/Shapes.hpp>
 #include <Thor/Math.hpp>
+#include <vector>
+#include "PhysicsBody.h"
+#include "PhysicsObject.h"
+#include "PhysicsDebugDraw.h"
 
 class PhysicsManager
 {
-private:
-	b2World* world; 
 public:
 	PhysicsManager();
 	~PhysicsManager();
 
-	void InitInstance(void);
+    void InitInstance(void);
 	void Update(void);
+    void EnableDebug(sf::RenderTarget* target);
+    static PhysicsBody* AddShape(PhysicsObject& shapeOwner, sf::Shape& shape);
 	// takes a ConcaveShape, splits it into multiple fixtures
 	// creates a body for the fixtures, and places the body in the world
 	// http://www.emanueleferonato.com/2011/09/12/create-non-convex-complex-shapes-with-box2d/
-	void AddConcaveShape(thor::ConcaveShape shape);
+    static PhysicsBody* AddConcaveShape(PhysicsObject& shapeOwner, thor::ConcaveShape& shape);
 	// returns true if a polygon is concave
 	bool IsConcave(thor::ConcaveShape shape);
 	// returns true if a polygon is complex (crossing lines or a hole)
@@ -32,5 +36,9 @@ public:
     // adds a SFML shape to the current world, creating a body and fixture for it first
     void AddShapeToWorld(const sf::ConvexShape& shape);
     
+private:
+    PhysicsDebugDraw* debugDrawer;
+    static b2World* world;
+    static std::vector<PhysicsBody*> bodies;
 };
 #endif // _PHYSICSMANAGER

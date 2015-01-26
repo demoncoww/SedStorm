@@ -18,8 +18,8 @@ class Triangle: public virtual GameObject, public virtual sf::ConvexShape
 {
 public:
     Triangle();
-    virtual void update();
-	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
+    virtual void Update();
+	virtual void Draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__Triangle__) */

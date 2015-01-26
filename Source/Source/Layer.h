@@ -20,19 +20,19 @@ class Layer{
 public:
     std::vector<GameObject*> objects;
     ~Layer(); //delete all GameObjects in objects
-    void updateObjects();
-    void drawObjects(sf::RenderWindow& window);
-    inline void pause(){ _isActive = false; }
-    inline void resume(){ _isActive = true; }
-    inline void disable(){ _isVisible = false; _isActive = false; };
-    inline void enable(){ _isVisible = true; _isActive = true; }
-    inline bool isActive(){ return _isActive;}
-    inline bool isVisible(){ return _isVisible;}
+    void UpdateObjects();
+    void DrawObjects(sf::RenderWindow& window);
+    inline void Pause(){ isActive = false; }
+    inline void Resume(){ isActive = true; }
+    inline void Disable(){ isVisible = false; isActive = false; };
+    inline void Enable(){ isVisible = true; isActive = true; }
+    inline bool IsActive(){ return isActive;}
+    inline bool IsVisible(){ return isVisible;}
 protected:
     Layer(); //constructor is protected so that this class will be treated as an interface
     Layer(bool isVisible, bool isActive);
-    bool _isVisible; //Should this layers draw function be called
-    bool _isActive; //Should this layers update function be called
+    bool isVisible; //Should this layers draw function be called
+    bool isActive; //Should this layers update function be called
 	void DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState);
 };
 

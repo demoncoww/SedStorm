@@ -17,10 +17,10 @@ Triangle::Triangle(){
     setFillColor(sf::Color::Green);
 }
 
-void Triangle::update() {
-    rotate(0.5);
+void Triangle::Update(){
+    rotate(3);
 }
 
-void Triangle::draw(sf::RenderTarget& window, sf::RenderStates& renderState) {
+void Triangle::Draw(sf::RenderTarget& window, sf::RenderStates& renderState) {
     window.draw(*this, renderState);
 }

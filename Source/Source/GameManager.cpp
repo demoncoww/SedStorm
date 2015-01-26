@@ -24,8 +24,8 @@ void GameManager::InitInstance()
 	renderManager->InitInstance();
 	physicsManager->InitInstance();
     
-    std::string name = "game";
-    GameLayer* layer = gameObjectManager->createGameLayer(name, true, true);
+	std::string name = "game";
+	GameLayer* layer = gameObjectManager->CreateGameLayer(name, true, true);
 
     //// Insert test triangle into the gameObjectManager
     //Triangle* triangle1 = new Triangle;
@@ -54,12 +54,19 @@ void GameManager::InitInstance()
     //layer->objects.push_back(triangle3);
     //layer->objects.push_back(triangle4);
 
-    Triangle* triangle1 = new Triangle;
-    triangle1->setPosition(sf::Vector2f(400, 300));
-    triangle1->setFillColor(sf::Color::Green);
+    //Triangle* triangle1 = new Triangle;
+    //triangle1->setPosition(sf::Vector2f(400, 300));
+    //triangle1->setFillColor(sf::Color::Green);
 
-    physicsManager->AddShapeToWorld(*triangle1);
-    layer->objects.push_back(triangle1);
+    //physicsManager->AddShapeToWorld(*triangle1);
+    //layer->objects.push_back(triangle1);
+
+	physicsManager->EnableDebug(gameWindow);
+    
+    //Insert test triangle into the gameObjectManager
+    layer->objects.push_back(new Triangle());
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300, 300), true));
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,0), false));
 }
 
 void GameManager::MainLoop()
@@ -95,7 +102,7 @@ void GameManager::MainLoop()
 			lastFrameTime = currentTime;
 			//printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
             //Run game logic:
-            gameObjectManager->updateLayers();
+            gameObjectManager->UpdateLayers();
             
             // render scene
 			renderManager->Draw();
