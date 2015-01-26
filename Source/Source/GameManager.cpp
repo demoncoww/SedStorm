@@ -1,7 +1,7 @@
 #include "GameManager.h"
 
 //UNCOMMENT THE FOLLOWING LINE TO ENABLE PHYSICS DEBUG
-#define PHYSICS_DEBUG
+//#define PHYSICS_DEBUG
 
 GameManager::GameManager()
 {
