@@ -23,7 +23,6 @@ TestPhysicsObject::TestPhysicsObject():PhysicsObject(){
     PhysicsManager::AddShape(*this);
 }
 
-//NOTE PHYSICS IS Not ALL FUCKED UP anymore
 TestPhysicsObject::TestPhysicsObject(sf::Vector2f position, bool isStatic):PhysicsObject(){
     setPointCount(3);
     setPoint(0, sf::Vector2f(0, 10));
