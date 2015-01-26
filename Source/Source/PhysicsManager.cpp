@@ -51,7 +51,7 @@ void PhysicsManager::AddShapeToWorld(const sf::ConvexShape& shape) {
     bodyDef.type = b2_dynamicBody;
     sf::Vector2f pos = shape.getPosition();
     bodyDef.position.Set(pos.x, pos.y); // shapes position is relative to this
-    bodyDef.angle = thor::toRadian(shape.getRotation);
+    bodyDef.angle = thor::toRadian(shape.getRotation());
     b2Body* body = world->CreateBody(&bodyDef);
     body->SetUserData(0); // store the pointer to the GameObject here
 
