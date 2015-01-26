@@ -34,7 +34,7 @@ void PhysicsManager::Update()
 	const int32 positionIterations = 3;   //how strongly to correct position
     
     //debugDrawer->GetTarget()->clear();
-   // world->DrawDebugData();
+    //world->DrawDebugData();
     //dynamic_cast<sf::RenderWindow*>(debugDrawer->GetTarget())->display();
     
 	world->Step(FRAMETIME, velocityIterations, positionIterations);
