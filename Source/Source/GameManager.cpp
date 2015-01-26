@@ -61,7 +61,7 @@ void GameManager::InitInstance()
     //physicsManager->AddShapeToWorld(*triangle1);
     //layer->objects.push_back(triangle1);
 
-	physicsManager->EnableDebug(gameWindow);
+	//physicsManager->EnableDebug(gameWindow);
     
     //Insert test triangle into the gameObjectManager
     layer->objects.push_back(new Triangle());

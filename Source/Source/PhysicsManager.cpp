@@ -50,7 +50,7 @@ void PhysicsManager::Update()
     }
 }
 
-PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner, sf::Shape& shape){
+PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner){
     PhysicsBody* physicsBody = new PhysicsBody();
     physicsBody->parent = &shapeOwner;
     
@@ -65,10 +65,10 @@ PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner, sf::Shape& shap
     physicsBody->body = world->CreateBody(&bodyDef);
     
     b2PolygonShape b2Shape;
-    unsigned int numVerts = shape.getPointCount();
+	unsigned int numVerts = shapeOwner.getPointCount();
     b2Vec2 *b2Points = new b2Vec2[numVerts];
     for(unsigned int i=0; i<numVerts; ++i){
-        sf::Vector2f point = shape.getPoint(i);
+		sf::Vector2f point = shapeOwner.getPoint(i);
         b2Points[i] = b2Vec2(point.x, point.y);
     }
     

@@ -15,7 +15,7 @@
 
 class PhysicsBody; //Forward declaring PhysicsBody as they both require references to each other
 
-class PhysicsObject: public GameObject{
+class PhysicsObject: public virtual GameObject, public virtual sf::ConvexShape {
 public:
     PhysicsBody* body;
     bool isStatic = false;
