@@ -1,18 +1,7 @@
 #ifndef _GEOMETRY
 #define _GEOMETRY
 
-/*
-* Convex Separator for Box2D Flash
-*
-* This class has been written by Antoan Angelov.
-* It is designed to work with Erin Catto's Box2D physics library.
-*
-* Everybody can use this software for any purpose, under two restrictions:
-* 1. You cannot claim that you wrote this software.
-* 2. You can not remove or alter this notice.
-*
-*/
-
+// from http://www.emanueleferonato.com/2011/09/12/create-non-convex-complex-shapes-with-box2d/
 // Modfied by David Lazell
 
 #include <Box2D/Box2D.h>
@@ -35,25 +24,35 @@ namespace Geometry
     vector<vector<b2Vec2>> calcShapes(vector<b2Vec2>& verts);
     void err(void);
 
+	/*
+	* Convex Separator for Box2D Flash
+	*
+	* This class has been written by Antoan Angelov.
+	* It is designed to work with Erin Catto's Box2D physics library.
+	*
+	* Everybody can use this software for any purpose, under two restrictions:
+	* 1. You cannot claim that you wrote this software.
+	* 2. You can not remove or alter this notice.
+	*
+	*/
+
 	/**
-	* Separates a non-convex polygon into convex polygons and adds them as fixtures to the <code>body</code> parameter.<br/>
+	* Separates a non-convex polygon into convex polygons and adds them as fixtures to the 'body' parameter.
 	* There are some rules you should follow (otherwise you might get unexpected results) :
-	* <ul>
-	* <li>This class is specifically for non-convex polygons. If you want to create a convex polygon, you don't need to use this class - Box2D's <code>b2PolygonShape</code> class allows you to create convex shapes with the <code>setAsArray()</code>/<code>setAsVector()</code> method.</li>
-	* <li>The vertices must be in clockwise order.</li>
-	* <li>No three neighbouring points should lie on the same line segment.</li>
-	* <li>There must be no overlapping segments and no "holes".</li>
-	* </ul> <p/>
-	* @param body The b2Body, in which the new fixtures will be stored.
-	* @param fixtureDef A b2FixtureDef, containing all the properties (friction, density, etc.) which the new fixtures will inherit.
-	* @param verticesVec The vertices of the non-convex polygon, in clockwise order.
-	* @param scale <code>[optional]</code> The scale which you use to draw shapes in Box2D. The bigger the scale, the better the precision. The default value is 30.
-	* @see b2PolygonShape
-	* @see b2PolygonShape.SetAsArray()
-	* @see b2PolygonShape.SetAsVector()
-	* @see b2Fixture
+	* 
+	* This class is specifically for non-convex polygons.
+	* The vertices must be in clockwise order.
+	* No three neighbouring points should lie on the same line segment.
+	* There must be no overlapping segments and no "holes".
+	*
+	* @param world : A b2World to add the new body to.
+	* @param bodyDef : A b2bodyDef, containing all the properties (type, position, etc.) which the new body will inherit.
+	* @param fixtureDef : A b2FixtureDef, containing all the properties (friction, density, etc.) which the new fixtures will inherit.
+	* @param vertices : The vertices of the non-convex polygon, in CCW order.
+	* @param scale : [optional] The scale which you use to draw shapes in Box2D. The bigger the scale, the better the precision. The default value is 30.
+	* @return A b2Body* of the body that was added to the world.
 	* */
-	void Separate(b2World& world, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef, vector<b2Vec2>& vertices, unsigned int scale = 30) {
+	b2Body* Separate(b2World& world, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef, vector<b2Vec2>& vertices, unsigned int scale = 30) {
 		int n = vertices.size();
 		vector<b2Vec2> vec;
 		b2Vec2 *b2Points = (b2Vec2*)alloca(sizeof(b2Vec2) * vertices.size());
@@ -80,20 +79,22 @@ namespace Geometry
 			//fixtureDef.density = 1;
 			body->CreateFixture(&fixtureDef);
 		}
+		return body;
 	}
 
 	/**
-	* Checks whether the vertices in <code>verticesVec</code> can be properly distributed into the new fixtures (more specifically, it makes sure there are no overlapping segments and the vertices are in clockwise order).
+	* Checks whether the vertices in 'verticesVec' can be properly distributed into the new fixtures
+	*  (more specifically, it makes sure there are no overlapping segments and the vertices are in CCW order).
 	* It is recommended that you use this method for debugging only, because it may cost more CPU usage.
-	* <p/>
+	*
 	* @param verticesVec The vertices to be validated.
 	* @return An integer which can have the following values:
-	* <ul>
-	* <li>0 if the vertices can be properly processed.</li>
-	* <li>1 If there are overlapping lines.</li>
-	* <li>2 if the points are <b>not</b> in clockwise order.</li>
-	* <li>3 if there are overlapping lines <b>and</b> the points are <b>not</b> in clockwise order.</li>
-	* </ul>
+	* 
+	* 0 if the vertices can be properly processed.
+	* 1 If there are overlapping lines.
+	* 2 if the points are _not_ in CCW order.
+	* 3 if there are overlapping lines _and_ the points are _not_ in CCW order.
+	*
 	* */
 
 	int Validate(vector<b2Vec2>& verts) {
@@ -110,7 +111,7 @@ namespace Geometry
 				if (j != i && j != i2) {
 					if (!fl) {
 						float d = det(verts[i].x, verts[i].y, verts[i2].x, verts[i2].y, verts[j].x, verts[j].y);
-						if (d > 0)
+						if (d < 0)
 							fl = true;
 					}
 					if (j != i3) {

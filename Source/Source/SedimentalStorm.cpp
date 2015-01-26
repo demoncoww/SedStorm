@@ -23,10 +23,9 @@ int main(int argc, char *argv[]) {
 	vertices.push_back(b2Vec2(0, 30));
 	vertices.push_back(b2Vec2(20, 40));
 	vertices.push_back(b2Vec2(0, 50));
-	vertices.push_back(b2Vec2(0.0f, 0.0f));
 
-    //int ret = Geometry::Validate(vertices);
-    //Geometry::Separate(testworld, bodyDef, fixtureDef, vertices);
+    int ret = Geometry::Validate(vertices);
+	//b2Body* testbody = Geometry::Separate(testworld, bodyDef, fixtureDef, vertices);
 
 	GameManager game;
 
