@@ -27,7 +27,7 @@ void GameManager::InitInstance()
     std::string name = "game";
     GameLayer* layer = gameObjectManager->createGameLayer(name, true, true);
 
-    //Insert test triangle into the gameObjectManager
+    //// Insert test triangle into the gameObjectManager
     //Triangle* triangle1 = new Triangle;
     //triangle1->setPosition(sf::Vector2f(400, 300));
     //triangle1->setFillColor(sf::Color::Green);
