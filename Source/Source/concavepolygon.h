@@ -31,12 +31,10 @@
 #include <Thor/Math/TriangulationFigures.hpp>
 #include <Thor/Config.hpp>
 
-#include <Aurora/SmartPtr/CopiedPtr.hpp>
-#include <Aurora/Tools/Swap.hpp>
-
 #include <SFML/Graphics.hpp>
 
 #include <vector>
+#include <memory> // for unique_ptr
 
 class ConcavePolygon : public virtual sf::Shape // we want to share the Transformable base class instance with Shape
 {
@@ -58,7 +56,8 @@ public:
     // FloatRect getLocalBounds() const;
     // FloatRect getGlobalBounds() const;
     
-    // members of Shape that we do have 
+    // members of Shape that we do have
+    // TODO: change these to use the built in shape member variables
     void						setFillColor(const sf::Color& fillColor);
     void						setOutlineColor(const sf::Color& outlineColor);
     void						setOutlineThickness(float outlineThickness);
@@ -67,7 +66,7 @@ public:
     float						getOutlineThickness() const;
 
 private:
-    typedef std::vector< aurora::CopiedPtr<sf::Shape> >	    ShapeContainer;
+    typedef std::vector< std::unique_ptr<sf::Shape> >	    ShapeContainer;
     typedef std::vector< sf::Vector2f >					    PointContainer;
     typedef std::vector< thor::Edge<const sf::Vector2f> >   EdgeContainer;
 
@@ -97,6 +96,8 @@ private:
     mutable bool				mNeedsEdgeUpdate;
 };
 
-AURORA_GLOBAL_SWAP(ConcavePolygon)
+inline void swap(ConcavePolygon& lhs, ConcavePolygon& rhs) {
+	lhs.swap(rhs);
+}
 
 #endif // _CONCAVEPOLYGON_HPP

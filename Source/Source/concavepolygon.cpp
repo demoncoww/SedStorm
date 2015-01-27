@@ -60,7 +60,7 @@ struct ConcavePolygon::TriangleGenerator
 
     // Assignment from triangle
     TriangleGenerator& operator= (const thor::Triangle<const sf::Vector2f>& triangle) {
-        auto shape = aurora::makeCopied<sf::ConvexShape>();
+        auto shape = std::make_unique<sf::ConvexShape>();
         shape->setPointCount(3);
         shape->setFillColor(color);
 
@@ -177,13 +177,13 @@ void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) con
 
     // Render the inside
     states.texture = getTexture(); // does this work??
-    for (auto shape : mTriangleShapes)
+    for (auto const& shape : mTriangleShapes)
         target.draw(*shape, states);
 
     // Draw all edges at the boundary
     if (mOutlineThickness != 0) {
         states.texture = NULL;
-        for (auto edge : mEdgeShapes)
+        for (auto const& edge : mEdgeShapes)
             target.draw(*edge, states);
     }
 }
@@ -207,7 +207,7 @@ void ConcavePolygon::formOutline() const {
         const float radius = mOutlineThickness / 2.f;
 
         // Insert circles at the polygon points to round the outline off
-        auto circle = aurora::makeCopied<sf::CircleShape>();
+        auto circle = std::make_unique<sf::CircleShape>();
         circle->setPosition(firstPos - sf::Vector2f(radius, radius));
         circle->setRadius(radius);
         circle->setFillColor(mOutlineColor);
@@ -218,6 +218,6 @@ void ConcavePolygon::formOutline() const {
 
         // Add shapes
         mEdgeShapes.push_back(std::move(circle));
-        mEdgeShapes.push_back(aurora::makeCopied<sf::ConvexShape>(line));
+        mEdgeShapes.push_back(std::make_unique<sf::ConvexShape>(line));
     }
 }
