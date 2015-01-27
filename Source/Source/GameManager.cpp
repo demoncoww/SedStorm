@@ -51,7 +51,9 @@ void GameManager::InitInstance()
 #endif
     
     // Create some test shapes
-    layer->objects.push_back(new ConcaveTriangle());
+    ConcaveTriangle* triangle1 = new ConcaveTriangle();
+    triangle1->setFillColor(sf::Color::Blue);
+    layer->objects.push_back(triangle1);
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(15, 30), true));
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(12.5,0), false));
     std::vector<sf::Vector2f> points;

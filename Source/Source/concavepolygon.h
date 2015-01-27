@@ -28,10 +28,9 @@
 #ifndef _CONCAVEPOLYGON_HPP
 #define _CONCAVEPOLYGON_HPP
 
-#include <Thor/Math/TriangulationFigures.hpp>
-#include <Thor/Config.hpp>
+#include <Thor/Math/TriangulationFigures.hpp> // for thor::Edge
 
-#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp> // for sf::Shape
 
 #include <vector>
 #include <memory> // for unique_ptr
@@ -57,7 +56,7 @@ public:
     // FloatRect getGlobalBounds() const;
     
     // members of Shape that we do have
-    // TODO: change these to use the built in shape member variables
+    // TODO: change these to use the built in shape member variables, instead of duplicating functionality
     void						setFillColor(const sf::Color& fillColor);
     void						setOutlineColor(const sf::Color& outlineColor);
     void						setOutlineThickness(float outlineThickness);

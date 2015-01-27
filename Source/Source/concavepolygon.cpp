@@ -30,10 +30,7 @@
 #include <Thor/Math/Triangulation.hpp>
 #include <Thor/Vectors/PolarVector2.hpp>
 
-#include <algorithm>
 #include <cassert>
-#include <cmath>
-
 
 struct ConcavePolygon::TriangleGenerator
 {
@@ -139,21 +136,21 @@ float ConcavePolygon::getOutlineThickness() const {
     return mOutlineThickness;
 }
 
-void ConcavePolygon::swap(ConcavePolygon& other) {
-    using std::swap;
-
-    swap(static_cast<sf::Transformable&>(*this), static_cast<sf::Transformable&>(other));
-
-    swap(mPoints, other.mPoints);
-    swap(mFillColor, other.mFillColor);
-    swap(mOutlineColor, other.mOutlineColor);
-    swap(mOutlineThickness, other.mOutlineThickness);
-    swap(mEdges, other.mEdges);
-    swap(mTriangleShapes, other.mTriangleShapes);
-    swap(mEdgeShapes, other.mEdgeShapes);
-    swap(mNeedsTriangleUpdate, other.mNeedsTriangleUpdate);
-    swap(mNeedsEdgeUpdate, other.mNeedsEdgeUpdate);
-}
+//void ConcavePolygon::swap(ConcavePolygon& other) {
+//    using std::swap;
+//
+//    swap(static_cast<sf::Transformable&>(*this), static_cast<sf::Transformable&>(other));
+//
+//    swap(mPoints, other.mPoints);
+//    swap(mFillColor, other.mFillColor);
+//    swap(mOutlineColor, other.mOutlineColor);
+//    swap(mOutlineThickness, other.mOutlineThickness);
+//    swap(mEdges, other.mEdges);
+//    swap(mTriangleShapes, other.mTriangleShapes);
+//    swap(mEdgeShapes, other.mEdgeShapes);
+//    swap(mNeedsTriangleUpdate, other.mNeedsTriangleUpdate);
+//    swap(mNeedsEdgeUpdate, other.mNeedsEdgeUpdate);
+//}
 
 void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     // One or zero points aren't rendered
