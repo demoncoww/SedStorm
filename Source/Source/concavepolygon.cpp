@@ -201,7 +201,7 @@ void ConcavePolygon::formOutline() const {
         return;
 
     // Create graphic edges
-    for (auto edge : mEdges) {
+    for (auto const& edge : mEdges) {
         sf::Vector2f firstPos = edge[0];
         sf::Vector2f secondPos = edge[1];
         const float radius = mOutlineThickness / 2.f;
