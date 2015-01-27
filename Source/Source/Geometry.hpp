@@ -3,7 +3,7 @@
 
 #include <Box2D/Box2D.h>
 #include <SFML/Graphics.hpp>
-#include <SFML\System\Vector2.hpp>
+#include <SFML/System/Vector2.hpp>
 #include <vector>
 #include <list>
 #include <cmath>
