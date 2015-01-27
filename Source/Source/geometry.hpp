@@ -11,7 +11,9 @@
 #include <limits>
 #include <algorithm>
 #include <string>
-using namespace std;
+using std::vector;
+using std::queue;
+using std::string;
 
 namespace Geometry
 {
