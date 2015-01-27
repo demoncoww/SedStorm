@@ -38,19 +38,19 @@
 
 #include <vector>
 
-class ConcavePolygon : public virtual sf::Shape
+class ConcavePolygon : public virtual sf::Shape // we want to share the Transformable base class instance with Shape
 {
 public:
-    explicit ConcavePolygon();
+    explicit                    ConcavePolygon();
     void						swap(ConcavePolygon& other);
 
-    // sf::ConvexShape has these:
-    void						setPointCount(unsigned int count);
+    // sf::ConvexShape has these as well:
     virtual unsigned int		getPointCount() const;
-    void						setPoint(unsigned int index, sf::Vector2f position);
     virtual sf::Vector2f		getPoint(unsigned int index) const;
+    void						setPointCount(unsigned int count);
+    void						setPoint(unsigned int index, sf::Vector2f position);
 
-    // members of Shape we dont have:
+    // members of Shape we don't have, do these work??
     // void setTexture(const Texture* texture, bool resetRect = false);
     // void setTextureRect(const IntRect& rect);
     // const Texture* getTexture() const;
@@ -89,6 +89,7 @@ private:
     sf::Color					mOutlineColor;
     float						mOutlineThickness;
 
+    // mutable = legal to assign the following from a const member function
     mutable EdgeContainer		mEdges;
     mutable ShapeContainer		mTriangleShapes;
     mutable ShapeContainer		mEdgeShapes;

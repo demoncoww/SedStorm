@@ -12,14 +12,14 @@
 #include <stdio.h>
 #include "GameObject.h"
 #include <Thor/Math.hpp>
+#include "ConcavePolygon.h"
 
-
-class ConcaveTriangle : public virtual GameObject, public virtual thor::ConcaveShape
+class ConcaveTriangle : public virtual GameObject, public virtual ConcavePolygon
 {
 public:
     ConcaveTriangle();
-    virtual void update();
-	virtual void draw(sf::RenderTarget& window, sf::RenderStates& renderState);
+    virtual void Update();
+	virtual void Draw(sf::RenderTarget& window, sf::RenderStates& renderState);
 };
 
 #endif /* defined(__Sedimental_Storm__ConcaveTriangle__) */

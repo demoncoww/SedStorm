@@ -10,13 +10,13 @@
 
 TestPhysicsObject::TestPhysicsObject():PhysicsObject(){
     setPointCount(3);
-    setPoint(0, sf::Vector2f(0, 20));
-    setPoint(1, sf::Vector2f(20, -20));
-    setPoint(2, sf::Vector2f(-20, -20));
+    setPoint(0, sf::Vector2f(0, 10));
+    setPoint(1, sf::Vector2f(10, -10));
+    setPoint(2, sf::Vector2f(-10, -10));
     //setPosition(300, 300);
     setFillColor(sf::Color::Red);
     
-    setPosition(300, 300);
+    setPosition(150, 150);
     
     isStatic = false;
     
@@ -25,9 +25,9 @@ TestPhysicsObject::TestPhysicsObject():PhysicsObject(){
 
 TestPhysicsObject::TestPhysicsObject(sf::Vector2f position, bool isStatic):PhysicsObject(){
     setPointCount(3);
-    setPoint(0, sf::Vector2f(0, 10));
-    setPoint(1, sf::Vector2f(5, -5));
-    setPoint(2, sf::Vector2f(-5, -5));
+    setPoint(0, sf::Vector2f(0, 5));
+    setPoint(1, sf::Vector2f(2.5, -2.5));
+    setPoint(2, sf::Vector2f(-2.5, -2.5));
     //setPosition(0,0);
     setFillColor(sf::Color::Red);
     

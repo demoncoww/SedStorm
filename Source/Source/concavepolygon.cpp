@@ -23,6 +23,8 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
+// Modified by David Lazell
+
 #include "concavepolygon.h"
 #include <Thor/Shapes/Shapes.hpp>
 #include <Thor/Math/Triangulation.hpp>
@@ -173,13 +175,17 @@ void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) con
     // Combine transforms
     states.transform *= getTransform();
 
-    // Draw all points
+    // Render the inside
+    states.texture = getTexture(); // does this work??
     for (auto shape : mTriangleShapes)
         target.draw(*shape, states);
 
     // Draw all edges at the boundary
-    for (auto edge: mEdgeShapes)
-        target.draw(*edge, states);
+    if (mOutlineThickness != 0) {
+        states.texture = NULL;
+        for (auto edge : mEdgeShapes)
+            target.draw(*edge, states);
+    }
 }
 
 void ConcavePolygon::decompose() const {
