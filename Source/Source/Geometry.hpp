@@ -410,7 +410,7 @@ namespace Geometry
 
         b2Body* body = world.CreateBody(&bodyDef);
 
-        for (auto vec : figsVec) {
+        for (auto const& vec : figsVec) {
             vector<b2Vec2> verticesVec;
             for (unsigned int i = 0; i < vec.size(); ++i)
                 verticesVec.push_back(b2Vec2(vec[i].x / scale, vec[i].y / scale));
