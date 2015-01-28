@@ -1,5 +1,7 @@
 #ifdef _DEBUG
 #ifdef _MSC_VER
+#pragma comment(lib, "user32")
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -27,6 +29,7 @@ void RedirectIOToConsole()
 	coninfo.dwSize.Y = MAX_CONSOLE_LINES;
 	coninfo.dwSize.X = MAX_CONSOLE_COLUMNS;
 	SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coninfo.dwSize);
+    MoveWindow(GetConsoleWindow(), 100, 200, 800, 600, TRUE); // resize window
 	// redirect unbuffered STDOUT to the console
 	lStdHandle = (long)GetStdHandle(STD_OUTPUT_HANDLE);
 	hConHandle = _open_osfhandle(lStdHandle, _O_TEXT);

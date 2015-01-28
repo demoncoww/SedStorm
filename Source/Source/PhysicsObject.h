@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <Box2D/Box2D.h>
 #include "GameObject.h"
+#include <Thor/Math.hpp>
 
 class PhysicsBody; //Forward declaring PhysicsBody as they both require references to each other
 

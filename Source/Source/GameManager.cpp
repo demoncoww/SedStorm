@@ -1,5 +1,11 @@
 #include "GameManager.h"
 
+// for testing
+#include "Triangle.h"
+#include "ConcaveTriangle.h"
+#include "TestPhysicsObject.h"
+#include "Sliceable.h"
+
 //UNCOMMENT THE FOLLOWING LINE TO ENABLE PHYSICS DEBUG
 //#define PHYSICS_DEBUG
 
@@ -21,7 +27,14 @@ GameManager::~GameManager()
 
 void GameManager::InitInstance()
 {
-	gameWindow->create(sf::VideoMode(800, 600, 32), "Sedimental Storm");
+	// logical game world coordinates are 80 by 45 meters
+    gameWindow->create(sf::VideoMode(1200, 675, 32), "Sedimental Storm"); // actual size of game window
+    
+    sf::View view;
+    view.setCenter(sf::Vector2f(40, 22.5)); // center of logical game world
+    view.setSize(sf::Vector2f(80, 45)); // size of logical game world in meters (for box2D)
+    gameWindow->setView(view);
+
 	physicsManager->InitInstance();
     
     renderManager->SetGameWindow(gameWindow);
@@ -32,55 +45,23 @@ void GameManager::InitInstance()
 	std::string name = "game";
 	GameLayer* layer = gameObjectManager->CreateGameLayer(name, true, true);
 
-    //// Insert test triangle into the gameObjectManager
-    //Triangle* triangle1 = new Triangle;
-    //triangle1->setPosition(sf::Vector2f(400, 300));
-    //triangle1->setFillColor(sf::Color::Green);
-
-    //Triangle* triangle2 = new Triangle;
-    ////triangle2->rotate(10);
-    //triangle2->setPosition(triangle2->getPosition() + sf::Vector2f(20, 20));
-    //triangle2->setFillColor(sf::Color(250, 100, 50));
-    //triangle2->setParent(triangle1);
-
-    //Triangle* triangle3 = new Triangle;
-    ////triangle3->rotate(10);
-    //triangle3->setPosition(triangle3->getPosition() + sf::Vector2f(20, 20));
-    //triangle3->setFillColor(sf::Color(50, 100, 250));
-    //triangle3->setParent(triangle2);
-
-    //Triangle* triangle4 = new Triangle;
-    ////triangle4->rotate(10);
-    //triangle4->setPosition(triangle4->getPosition() + sf::Vector2f(20, 20));
-    //triangle4->setFillColor(sf::Color(150, 150, 150));
-    //triangle4->setParent(triangle3);
-
-    //layer->objects.push_back(triangle2);
-    //layer->objects.push_back(triangle3);
-    //layer->objects.push_back(triangle4);
-
-    //Triangle* triangle1 = new Triangle;
-    //triangle1->setPosition(sf::Vector2f(400, 300));
-    //triangle1->setFillColor(sf::Color::Green);
-
-    //physicsManager->AddShapeToWorld(*triangle1);
-    //layer->objects.push_back(triangle1);
-
 #ifdef PHYSICS_DEBUG
-    //ENABLE DEBUG
+    // Enable drawing of physics objects
 	physicsManager->EnableDebug(gameWindow);
 #endif
     
-    //Insert test triangle into the gameObjectManager
-    layer->objects.push_back(new Triangle());
-    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300, 300), true));
-    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(300,0), false));
+    // Create some test shapes
+    ConcaveTriangle* triangle1 = new ConcaveTriangle();
+    triangle1->setFillColor(sf::Color::Blue);
+    layer->objects.push_back(triangle1);
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(15, 30), true));
+    layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(12.5,0), false));
     std::vector<sf::Vector2f> points;
-    points.push_back(sf::Vector2f(-50.0f,-50.0f));
-    points.push_back(sf::Vector2f(-50.0f, 50.0f));
-    points.push_back(sf::Vector2f( 50.0f, 50.0f));
-    points.push_back(sf::Vector2f( 50.0f,-50.0f));
-    layer->objects.push_back(new Sliceable(sf::Vector2f(300,200), points, false));
+    points.push_back(sf::Vector2f(-2.5f, -2.5f));
+    points.push_back(sf::Vector2f(-2.5f, 2.5f));
+    points.push_back(sf::Vector2f(2.5f, 2.5f));
+    points.push_back(sf::Vector2f(2.5f, -2.5f));
+    layer->objects.push_back(new Sliceable(sf::Vector2f(16,10), points, false));
 }
 
 void GameManager::MainLoop()
@@ -102,7 +83,6 @@ void GameManager::MainLoop()
 		//printf("Processing Messages\n");
 		currentTime = clock.getElapsedTime().asSeconds();
 		if (currentTime >= FRAMETIME * frame) {
-			// physics simulation
 			timeSinceLastUpdate = currentTime - lastFrameTime;
 			if (timeSinceLastUpdate > FRAMETIME * 2.0f) {
 				frame = (int)(currentTime / FRAMETIME);
@@ -115,12 +95,13 @@ void GameManager::MainLoop()
 			++frame;
 			lastFrameTime = currentTime;
 			//printf("Time since last frame is %f seconds, frame %d\n", timeSinceLastUpdate, frame);
-            //Run game logic:
-            gameObjectManager->UpdateLayers();
             
+            //Run game logic:
+            gameObjectManager->UpdateLayers(); // are we sure we only want to do this only on every frame?
+			// run physics simulation
+            physicsManager->Update();
             // render scene
 			renderManager->Draw();
-			physicsManager->Update();
 		}
 	}
 }

@@ -1,14 +1,14 @@
-// Game includes
-#include "GameManager.h"
 
+//UNCOMMENT THE FOLLOWING LINE TO ENABLE PHYSICS DEBUG
+//#define PHYSICS_DEBUG
+
+#include "GameManager.h"
 #include "SedimentalStorm.h"
+#include "Geometry.h"
 
 void RedirectIOToConsole(void);
 
 int main(int argc, char *argv[]) {
-    //sf::Texture texture;
-    //thor::ParticleSystem system;
-    //system.setTexture(texture);
 	GameManager game;
 
 	#ifdef _DEBUG
