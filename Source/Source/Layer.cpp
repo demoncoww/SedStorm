@@ -32,7 +32,7 @@ void Layer::DrawObjects(sf::RenderWindow& window) {
 }
 
 void Layer::DrawChildren(sf::RenderTarget& target, GameObject* parent, sf::RenderStates& renderState) {
-	for (auto& child : parent->GetChildren()) {
+	for (auto const& child : parent->GetChildren()) {
 		child->Draw(target, renderState); // draw child
         sf::Transform oldTransform = renderState.transform; // save transform
         renderState.transform *= child->getTransform(); // apply childs's tranform before sending to next child

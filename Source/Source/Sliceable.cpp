@@ -11,7 +11,7 @@
 Sliceable::Sliceable(sf::Vector2f position, std::vector<sf::Vector2f>& points, bool isThisStatic){
     setPosition(position);
     setPointCount(points.size());
-    for(int i=0; i<points.size(); ++i){
+    for(unsigned int i=0; i<points.size(); ++i){
         setPoint(i, points[i]);
     }
     

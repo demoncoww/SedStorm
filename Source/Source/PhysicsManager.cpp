@@ -4,13 +4,13 @@ b2World* PhysicsManager::world;
 
 PhysicsManager::PhysicsManager()
 {
-	b2Vec2 gravity(0.0f, 9.8f); //Should be 9.8
+	b2Vec2 gravity(0.0f, 9.8f);
 	world = new b2World(gravity);
 }
 
 PhysicsManager::~PhysicsManager()
 {
-	delete world; // also deletes all bodies, shaopes, fixtures, and joints in the world
+	delete world; // also deletes all bodies, shapes, fixtures, and joints in the world
 }
 
 void PhysicsManager::InitInstance()
@@ -73,7 +73,7 @@ PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner){
     
     b2PolygonShape b2Shape;
 	unsigned int numVerts = shapeOwner.getPointCount();
-    b2Vec2 *b2Points = new b2Vec2[numVerts];
+	b2Vec2 *b2Points = (b2Vec2*)alloca(sizeof(b2Vec2) * numVerts);
     for(unsigned int i=0; i<numVerts; ++i){
 		sf::Vector2f point = shapeOwner.getPoint(i);
         b2Points[i] = b2Vec2(point.x, point.y);
