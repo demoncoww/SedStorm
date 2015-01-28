@@ -5,6 +5,7 @@ b2World* PhysicsManager::world;
 
 PhysicsManager::PhysicsManager()
 {
+	debugDrawer = nullptr;
 	b2Vec2 gravity(0.0f, 9.8f);
 	world = new b2World(gravity);
 }
@@ -25,7 +26,7 @@ void PhysicsManager::InitInstance()
     groundBody->CreateFixture(&groundBox, 0.0f);
 }
 
-void PhysicsManager::EnableDebug(sf::RenderTarget* target){
+void PhysicsManager::EnableDebug(sf::RenderTarget* target) {
     if(debugDrawer == nullptr){
         debugDrawer = new PhysicsDebugDraw(target);
         world->SetDebugDraw( debugDrawer );
