@@ -15,6 +15,17 @@ using std::vector;
 using std::queue;
 using std::string;
 
+/*	This namespace has the following high level functions available:
+
+	std::vector<std::vector<Point>> Slice(std::vector<Point> points, Point p1, Point p2);
+	// Separates a non-convex polygon into convex polygons and adds them as fixtures to the 'body' parameter
+	b2Body* Separate(b2World& world, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef, vector<b2Vec2>& vertices, unsigned int scale = 30);
+	int Validate(vector<b2Vec2>& verts);
+
+	// breaks down a simple concave polygon into a vector of convex polygons
+	vector<vector<b2Vec2>> CalcShapes(vector<b2Vec2>& verts);
+*/
+	
 namespace Geometry
 {
     // The following code was translated from http://polyk.ivank.net/polyk.js
@@ -294,7 +305,7 @@ namespace Geometry
     }
 
     // This function will slice a polygon(convex or concave) into multiple polygons 
-    std::vector<std::vector<Point>> slice(std::vector<Point> points, Point p1, Point p2) {
+    std::vector<std::vector<Point>> Slice(std::vector<Point> points, Point p1, Point p2) {
         std::vector<std::vector<Point>> result;
         std::vector<Point> iscs;	// intersection points
 
@@ -365,7 +376,7 @@ namespace Geometry
     bool isOnSegment(float px, float py, float x1, float y1, float x2, float y2);
     b2Vec2 hitRay(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
     b2Vec2 hitSegment(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
-    vector<vector<b2Vec2>> calcShapes(vector<b2Vec2>& verts);
+    vector<vector<b2Vec2>> CalcShapes(vector<b2Vec2>& verts);
     void err(void);
 
     /*
@@ -406,7 +417,7 @@ namespace Geometry
         for (int i = 0; i<n; ++i)
             vec.push_back(b2Vec2(vertices[i].x * scale, vertices[i].y * scale));
 
-        vector<vector<b2Vec2>> figsVec = calcShapes(vec);
+        vector<vector<b2Vec2>> figsVec = CalcShapes(vec);
 
         b2Body* body = world.CreateBody(&bodyDef);
 
@@ -483,7 +494,7 @@ namespace Geometry
     }
 
     // breaks down a simple concave polygon into a vector of convex polygons
-    vector<vector<b2Vec2>> calcShapes(vector<b2Vec2>& verts) {
+    vector<vector<b2Vec2>> CalcShapes(vector<b2Vec2>& verts) {
         vector<vector<b2Vec2>> figsVec;
         queue<vector<b2Vec2>> queue;
         queue.push(verts);
