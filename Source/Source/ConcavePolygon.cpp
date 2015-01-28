@@ -32,48 +32,6 @@
 
 #include <cassert>
 
-/*
-struct ConcavePolygon::TriangleGenerator
-{
-    TriangleGenerator(ShapeContainer& triangles, const sf::Color& color)
-        : triangles(&triangles)
-        , color(color) {
-        triangles.clear();
-    }
-
-    // Fake dereferencing
-    TriangleGenerator& operator* () {
-        return *this;
-    }
-
-    // Fake pre-increment
-    TriangleGenerator& operator++ () {
-        return *this;
-    }
-
-    // Fake post-increment
-    TriangleGenerator& operator++ (int) {
-        return *this;
-    }
-
-    // Assignment from triangle
-    TriangleGenerator& operator= (const thor::Triangle<const sf::Vector2f>& triangle) {
-        auto shape = std::make_unique<sf::ConvexShape>();
-        shape->setPointCount(3);
-        shape->setFillColor(color);
-
-        for (unsigned int i = 0; i < 3; ++i)
-            shape->setPoint(i, triangle[i]);
-
-        triangles->push_back(std::move(shape));
-        return *this;
-    }
-
-    ShapeContainer*	triangles;
-    sf::Color		color;
-};
-*/
-
 // ---------------------------------------------------------------------------------------------------------------------------
 
 
@@ -84,9 +42,8 @@ ConcavePolygon::ConcavePolygon()
     , mOutlineColor()
     , mOutlineThickness(0.f)
     , mEdges()
-//    , mTriangleShapes()
+    , m_ConvexShapes()
     , mEdgeShapes()
-//    , mNeedsTriangleUpdate(false)
 	, m_NeedsConvexShapeUpdate(false)
     , mNeedsEdgeUpdate(false) {
 }
@@ -192,6 +149,7 @@ void ConcavePolygon::decompose() const {
     mEdges.clear();
 	m_ConvexShapes.clear();
 
+	// Split the concave polygon into convex shapes that can be represented by sf::ConvexShape
 	vector<vector<sf::Vector2f>> polygonPointsVec = Geometry::CalcShapes(mPoints);
 	for (unsigned int i = 0; i < polygonPointsVec.size(); ++i) {
 		auto& convexPoints = polygonPointsVec[i];
@@ -208,8 +166,6 @@ void ConcavePolygon::decompose() const {
 
 		m_ConvexShapes.push_back(std::move(shape));
 	}
-	// Split the concave polygon into convex shapes that can be represented by sf::ConvexShape
-	//triangulatePolygon(mPoints.begin(), mPoints.end(), TriangleGenerator(mTriangleShapes, mFillColor), std::back_inserter(mEdges));
 }
 
 void ConcavePolygon::formOutline() const {

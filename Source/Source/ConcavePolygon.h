@@ -67,7 +67,6 @@ public:
 
 private:
     typedef std::vector< std::unique_ptr<sf::Shape> >	    ShapeContainer;
-    //typedef std::vector< sf::Vector2f >					    PointContainer;
     typedef std::vector< thor::Edge<const sf::Vector2f> >   EdgeContainer;
 
     struct TriangleGenerator;
@@ -90,10 +89,8 @@ private:
 
     // mutable = legal to assign the following from a const member function
     mutable EdgeContainer		mEdges;
-    //mutable ShapeContainer		mTriangleShapes;
 	mutable ShapeContainer		m_ConvexShapes;
     mutable ShapeContainer		mEdgeShapes;
-    //mutable bool				mNeedsTriangleUpdate;
 	mutable bool				m_NeedsConvexShapeUpdate;
     mutable bool				mNeedsEdgeUpdate;
 };
