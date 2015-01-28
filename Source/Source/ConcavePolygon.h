@@ -33,14 +33,22 @@
 #include <SFML/Graphics.hpp> // for sf::Shape and sf::ConvexShape
 
 #include <vector>
-#include <memory> // for unique_ptr
+#include <memory> // for unique_ptr and shared_ptr
 #include "Geometry.h" // for splitting a concave polygon into multiple convex polygons
+
+typedef std::vector< std::unique_ptr<sf::Shape> >	    ShapeContainer;
+typedef std::vector< std::shared_ptr<sf::Shape> >	    SharedShapeContainer;
+typedef std::vector< thor::Edge<const sf::Vector2f> >   EdgeContainer;
 
 class ConcavePolygon : public virtual sf::Shape // we want to share the Transformable base class instance with Shape
 {
 public:
     explicit                    ConcavePolygon();
     void						swap(ConcavePolygon& other);
+
+	SharedShapeContainer&		GetConvexShapesVector();
+
+	bool IsConvexShape()		{ return m_isConvex; }
 
     // sf::ConvexShape has these as well:
     virtual unsigned int		getPointCount() const;
@@ -66,13 +74,6 @@ public:
     float						getOutlineThickness() const;
 
 private:
-    typedef std::vector< std::unique_ptr<sf::Shape> >	    ShapeContainer;
-    typedef std::vector< thor::Edge<const sf::Vector2f> >   EdgeContainer;
-
-    struct TriangleGenerator;
-
-
-private:
     virtual void				draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
     // Computes how the shape can be split up into convex shapes.
@@ -86,10 +87,11 @@ private:
     sf::Color					mFillColor;
     sf::Color					mOutlineColor;
     float						mOutlineThickness;
+	mutable bool				m_isConvex;
 
     // mutable = legal to assign the following from a const member function
     mutable EdgeContainer		mEdges;
-	mutable ShapeContainer		m_ConvexShapes;
+	mutable SharedShapeContainer		m_ConvexShapes;
     mutable ShapeContainer		mEdgeShapes;
 	mutable bool				m_NeedsConvexShapeUpdate;
     mutable bool				mNeedsEdgeUpdate;

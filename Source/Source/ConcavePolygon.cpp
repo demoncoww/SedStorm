@@ -147,17 +147,20 @@ void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) con
 
 void ConcavePolygon::decompose() const {
     mEdges.clear();
+	mEdgeShapes.clear();
 	m_ConvexShapes.clear();
 
 	// Split the concave polygon into convex shapes that can be represented by sf::ConvexShape
 	vector<vector<sf::Vector2f>> polygonPointsVec = Geometry::CalcShapes(mPoints);
+	m_isConvex = polygonPointsVec.size() > 1 ? false : true;
+
 	for (unsigned int i = 0; i < polygonPointsVec.size(); ++i) {
 		auto& convexPoints = polygonPointsVec[i];
 		unsigned int numPoints = convexPoints.size();
 		sf::Vector2f p1 = convexPoints[i];
 		sf::Vector2f p2 = convexPoints[(i + 1) % numPoints];
 		mEdges.push_back(thor::Edge<const sf::Vector2f>(p1, p2));
-		auto shape = std::make_unique<sf::ConvexShape>();
+		auto shape = std::make_shared<sf::ConvexShape>();
 		shape->setPointCount(convexPoints.size());
 		shape->setFillColor(mFillColor);
 
@@ -193,4 +196,10 @@ void ConcavePolygon::formOutline() const {
         mEdgeShapes.push_back(std::move(circle));
         mEdgeShapes.push_back(std::make_unique<sf::ConvexShape>(line));
     }
+}
+
+SharedShapeContainer& ConcavePolygon::GetConvexShapesVector() {
+	if (m_NeedsConvexShapeUpdate)
+		decompose();
+	return m_ConvexShapes;
 }
