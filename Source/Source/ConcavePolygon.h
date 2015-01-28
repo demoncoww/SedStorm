@@ -30,10 +30,11 @@
 
 #include <Thor/Math/TriangulationFigures.hpp> // for thor::Edge
 
-#include <SFML/Graphics.hpp> // for sf::Shape
+#include <SFML/Graphics.hpp> // for sf::Shape and sf::ConvexShape
 
 #include <vector>
 #include <memory> // for unique_ptr
+#include "Geometry.h" // for splitting a concave polygon into multiple convex polygons
 
 class ConcavePolygon : public virtual sf::Shape // we want to share the Transformable base class instance with Shape
 {
@@ -66,7 +67,7 @@ public:
 
 private:
     typedef std::vector< std::unique_ptr<sf::Shape> >	    ShapeContainer;
-    typedef std::vector< sf::Vector2f >					    PointContainer;
+    //typedef std::vector< sf::Vector2f >					    PointContainer;
     typedef std::vector< thor::Edge<const sf::Vector2f> >   EdgeContainer;
 
     struct TriangleGenerator;
@@ -75,23 +76,25 @@ private:
 private:
     virtual void				draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-    // Computes how the shape can be split up into convex triangles.
+    // Computes how the shape can be split up into convex shapes.
     void						decompose() const;
 
     // Forms the outline out of the given edges.
     void						formOutline() const;
 
 private:
-    PointContainer				mPoints;
+	std::vector<sf::Vector2f>	mPoints;
     sf::Color					mFillColor;
     sf::Color					mOutlineColor;
     float						mOutlineThickness;
 
     // mutable = legal to assign the following from a const member function
     mutable EdgeContainer		mEdges;
-    mutable ShapeContainer		mTriangleShapes;
+    //mutable ShapeContainer		mTriangleShapes;
+	mutable ShapeContainer		m_ConvexShapes;
     mutable ShapeContainer		mEdgeShapes;
-    mutable bool				mNeedsTriangleUpdate;
+    //mutable bool				mNeedsTriangleUpdate;
+	mutable bool				m_NeedsConvexShapeUpdate;
     mutable bool				mNeedsEdgeUpdate;
 };
 

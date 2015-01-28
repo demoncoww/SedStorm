@@ -25,13 +25,14 @@
 
 // Modified by David Lazell
 
-#include "concavepolygon.h"
+#include "ConcavePolygon.h"
 #include <Thor/Shapes/Shapes.hpp>
 #include <Thor/Math/Triangulation.hpp>
 #include <Thor/Vectors/PolarVector2.hpp>
 
 #include <cassert>
 
+/*
 struct ConcavePolygon::TriangleGenerator
 {
     TriangleGenerator(ShapeContainer& triangles, const sf::Color& color)
@@ -71,6 +72,7 @@ struct ConcavePolygon::TriangleGenerator
     ShapeContainer*	triangles;
     sf::Color		color;
 };
+*/
 
 // ---------------------------------------------------------------------------------------------------------------------------
 
@@ -82,9 +84,10 @@ ConcavePolygon::ConcavePolygon()
     , mOutlineColor()
     , mOutlineThickness(0.f)
     , mEdges()
-    , mTriangleShapes()
+//    , mTriangleShapes()
     , mEdgeShapes()
-    , mNeedsTriangleUpdate(false)
+//    , mNeedsTriangleUpdate(false)
+	, m_NeedsConvexShapeUpdate(false)
     , mNeedsEdgeUpdate(false) {
 }
 
@@ -99,7 +102,7 @@ unsigned int ConcavePolygon::getPointCount() const {
 void ConcavePolygon::setPoint(unsigned int index, sf::Vector2f position) {
     mPoints[index] = position;
 
-    mNeedsTriangleUpdate = true;
+	m_NeedsConvexShapeUpdate = true;
     mNeedsEdgeUpdate = true;
 }
 
@@ -109,7 +112,7 @@ sf::Vector2f ConcavePolygon::getPoint(unsigned int index) const {
 
 void ConcavePolygon::setFillColor(const sf::Color& fillColor) {
     mFillColor = fillColor;
-    mNeedsTriangleUpdate = true;
+	m_NeedsConvexShapeUpdate = true;
 }
 
 sf::Color ConcavePolygon::getFillColor() const {
@@ -158,15 +161,15 @@ void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) con
         return;
 
     // Batch logics
-    if (mNeedsEdgeUpdate || mNeedsTriangleUpdate) {
-        if (mNeedsTriangleUpdate)
+	if (mNeedsEdgeUpdate || m_NeedsConvexShapeUpdate) {
+		if (m_NeedsConvexShapeUpdate)
             decompose();
 
         if (mNeedsEdgeUpdate)
             formOutline();
 
         mNeedsEdgeUpdate = false;
-        mNeedsTriangleUpdate = false;
+		m_NeedsConvexShapeUpdate = false;
     }
 
     // Combine transforms
@@ -174,7 +177,7 @@ void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) con
 
     // Render the inside
     states.texture = getTexture(); // does this work??
-    for (auto const& shape : mTriangleShapes)
+	for (auto const& shape : m_ConvexShapes)
         target.draw(*shape, states);
 
     // Draw all edges at the boundary
@@ -187,9 +190,26 @@ void ConcavePolygon::draw(sf::RenderTarget& target, sf::RenderStates states) con
 
 void ConcavePolygon::decompose() const {
     mEdges.clear();
+	m_ConvexShapes.clear();
 
-    // Split the concave polygon into convex triangles that can be represented by sf::ConvexShape
-    triangulatePolygon(mPoints.begin(), mPoints.end(), TriangleGenerator(mTriangleShapes, mFillColor), std::back_inserter(mEdges));
+	vector<vector<sf::Vector2f>> polygonPointsVec = Geometry::CalcShapes(mPoints);
+	for (unsigned int i = 0; i < polygonPointsVec.size(); ++i) {
+		auto& convexPoints = polygonPointsVec[i];
+		unsigned int numPoints = convexPoints.size();
+		sf::Vector2f p1 = convexPoints[i];
+		sf::Vector2f p2 = convexPoints[(i + 1) % numPoints];
+		mEdges.push_back(thor::Edge<const sf::Vector2f>(p1, p2));
+		auto shape = std::make_unique<sf::ConvexShape>();
+		shape->setPointCount(convexPoints.size());
+		shape->setFillColor(mFillColor);
+
+		for (unsigned int i = 0; i < numPoints; ++i)
+			shape->setPoint(i, convexPoints[i]);
+
+		m_ConvexShapes.push_back(std::move(shape));
+	}
+	// Split the concave polygon into convex shapes that can be represented by sf::ConvexShape
+	//triangulatePolygon(mPoints.begin(), mPoints.end(), TriangleGenerator(mTriangleShapes, mFillColor), std::back_inserter(mEdges));
 }
 
 void ConcavePolygon::formOutline() const {

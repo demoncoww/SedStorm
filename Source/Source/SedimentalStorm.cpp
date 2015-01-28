@@ -4,7 +4,7 @@
 
 #include "GameManager.h"
 #include "SedimentalStorm.h"
-#include "geometry.hpp"
+#include "Geometry.h"
 
 void RedirectIOToConsole(void);
 

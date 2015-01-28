@@ -21,6 +21,7 @@
 #include "RenderManager.h"
 #include "PhysicsManager.h"
 #include "GameObjectManager.h"
+#include "Geometry.h" // for splitting a concave polygon into multiple convex polygons
 
 class GameManager
 {
