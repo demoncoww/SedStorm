@@ -22,10 +22,14 @@ ConcaveTriangle::ConcaveTriangle() {
     setPoint(8, sf::Vector2f(0, 5));
     setFillColor(sf::Color::Green);
     setPosition(50, 20);
+
+	isStatic = false;
+
+	PhysicsManager::AddShape(*this);
 }
 
 void ConcaveTriangle::Update() {
-    rotate(0.5);
+    //rotate(0.5);
 }
 
 void ConcaveTriangle::Draw(sf::RenderTarget& window, sf::RenderStates& renderState) {

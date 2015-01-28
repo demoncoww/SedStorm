@@ -79,7 +79,7 @@ namespace Geometry
 	b2Body* Separate(b2World& world, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef, vector<VectorType>& vertices, unsigned int scale = 30) {
         int n = vertices.size();
         vector<VectorType> vec;
-        VectorType *b2Points = (VectorType*)alloca(sizeof(VectorType) * vertices.size());
+		b2Vec2* b2Points = (b2Vec2*)alloca(sizeof(b2Vec2) * vertices.size());
 
         for (int i = 0; i<n; ++i)
             vec.push_back(VectorType(vertices[i].x * scale, vertices[i].y * scale));
@@ -96,7 +96,7 @@ namespace Geometry
             b2PolygonShape b2Shape;
             unsigned int numVerts = verticesVec.size();
             for (unsigned int i = 0; i < numVerts; ++i)
-                b2Points[i] = VectorType(verticesVec[i].x, verticesVec[i].y);
+				b2Points[i] = b2Vec2(verticesVec[i].x, verticesVec[i].y);
             b2Shape.Set(b2Points, numVerts);
 
             fixtureDef.shape = &b2Shape;

@@ -13,10 +13,11 @@
 #include <Box2D/Box2D.h>
 #include "GameObject.h"
 #include <Thor/Math.hpp>
+#include "ConcavePolygon.h"
 
 class PhysicsBody; //Forward declaring PhysicsBody as they both require references to each other
 
-class PhysicsObject: public virtual GameObject, public virtual sf::ConvexShape {
+class PhysicsObject: public virtual GameObject, public virtual ConcavePolygon {
 public:
     PhysicsBody* body;
     bool isStatic = false;
