@@ -1,6 +1,6 @@
 
 //UNCOMMENT THE FOLLOWING LINE TO ENABLE PHYSICS DEBUG
-//#define PHYSICS_DEBUG
+#define PHYSICS_DEBUG
 
 #include "GameManager.h"
 #include "SedimentalStorm.h"

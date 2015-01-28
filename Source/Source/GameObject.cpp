@@ -38,7 +38,7 @@ bool GameObject::IsTopLevel() {
 }
 
 sf::Vector2f GameObject::getWorldPosition(){
-    
+	return sf::Vector2f(0, 0);
 }
 
 
