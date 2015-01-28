@@ -13,6 +13,8 @@
 #include <Box2D/Box2D.h>
 #include "PhysicsObject.h"
 
+class PhysicsObject;
+
 class PhysicsBody
 {
 public:
