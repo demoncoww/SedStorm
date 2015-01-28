@@ -1,9 +1,11 @@
 #include "PhysicsManager.h"
+#include "Geometry.h"
 
 b2World* PhysicsManager::world;
 
 PhysicsManager::PhysicsManager()
 {
+	debugDrawer = nullptr;
 	b2Vec2 gravity(0.0f, 9.8f);
 	world = new b2World(gravity);
 }
@@ -24,7 +26,7 @@ void PhysicsManager::InitInstance()
     groundBody->CreateFixture(&groundBox, 0.0f);
 }
 
-void PhysicsManager::EnableDebug(sf::RenderTarget* target){
+void PhysicsManager::EnableDebug(sf::RenderTarget* target) {
     if(debugDrawer == nullptr){
         debugDrawer = new PhysicsDebugDraw(target);
         world->SetDebugDraw( debugDrawer );
@@ -57,7 +59,27 @@ void PhysicsManager::Update()
     }
 }
 
-PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner){
+b2Body* PhysicsManager::SeparateConcavePolygon(PhysicsObject& shapeOwner, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef) {
+	b2Body* body = world->CreateBody(&bodyDef);
+
+	auto figsVec = shapeOwner.GetConvexShapesVector();
+	b2Vec2* b2Points = (b2Vec2*)alloca(sizeof(b2Vec2) * 8);
+
+	for (auto const& poly : figsVec) {
+		b2PolygonShape b2Shape;
+		unsigned int numVerts = poly->getPointCount();
+		for (unsigned int i = 0; i < numVerts; ++i)
+			b2Points[i] = b2Vec2(poly->getPoint(i).x, poly->getPoint(i).y);
+		b2Shape.Set(b2Points, numVerts);
+
+		fixtureDef.shape = &b2Shape;
+		//fixtureDef.density = 1;
+		body->CreateFixture(&fixtureDef);
+	}
+	return body;
+}
+
+PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner) {
     PhysicsBody* physicsBody = new PhysicsBody();
     physicsBody->parent = &shapeOwner;
     
@@ -69,25 +91,12 @@ PhysicsBody* PhysicsManager::AddShape(PhysicsObject& shapeOwner){
     bodyDef.position.Set(position.x, position.y); //set the starting position
     bodyDef.angle = shapeOwner.getRotation(); //set the starting angle
     
-    physicsBody->body = world->CreateBody(&bodyDef);
-    
-    b2PolygonShape b2Shape;
-	unsigned int numVerts = shapeOwner.getPointCount();
-	b2Vec2 *b2Points = (b2Vec2*)alloca(sizeof(b2Vec2) * numVerts);
-    for(unsigned int i=0; i<numVerts; ++i){
-		sf::Vector2f point = shapeOwner.getPoint(i);
-        b2Points[i] = b2Vec2(point.x, point.y);
-    }
-    
-    b2Shape.Set(b2Points, numVerts);
-    
     b2FixtureDef fixtureDef;
-    fixtureDef.shape = &b2Shape;
     fixtureDef.density = 1;
-    physicsBody->body->CreateFixture(&fixtureDef);
     
-    physicsBody->body->SetUserData((void *)physicsBody);
-    
+	physicsBody->body = SeparateConcavePolygon(shapeOwner, bodyDef, fixtureDef);
+	physicsBody->body->SetUserData((void *)physicsBody);
+
     return physicsBody;
 }
 

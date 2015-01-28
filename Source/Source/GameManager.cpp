@@ -7,7 +7,7 @@
 #include "Sliceable.h"
 
 //UNCOMMENT THE FOLLOWING LINE TO ENABLE PHYSICS DEBUG
-//#define PHYSICS_DEBUG
+// #define PHYSICS_DEBUG
 
 GameManager::GameManager()
 {
@@ -54,6 +54,7 @@ void GameManager::InitInstance()
     ConcaveTriangle* triangle1 = new ConcaveTriangle();
     triangle1->setFillColor(sf::Color::Blue);
     layer->objects.push_back(triangle1);
+
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(15, 30), true));
     layer->objects.push_back(new TestPhysicsObject(sf::Vector2f(12.5,0), false));
     std::vector<sf::Vector2f> points;

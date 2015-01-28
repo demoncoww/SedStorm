@@ -24,6 +24,7 @@ public:
 	virtual void Draw(sf::RenderTarget& target, sf::RenderStates& renderState);
     virtual ~GameObject();
     void SetParent(GameObject* parent);
+    sf::Vector2f getWorldPosition();
     inline GameObject& GetParent(){return *_parent;}
     inline std::vector<GameObject*>& GetChildren(){return _children;}
 	bool IsTopLevel(); // returns true if the GameObject has no parent, as we only want to draw these, not children

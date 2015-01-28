@@ -10,11 +10,12 @@
 #define __Sedimental_Storm__ConcaveTriangle__
 
 #include <stdio.h>
-#include "GameObject.h"
 #include <Thor/Math.hpp>
 #include "ConcavePolygon.h"
+#include "PhysicsObject.h"
+#include "PhysicsManager.h"
 
-class ConcaveTriangle : public virtual GameObject, public virtual ConcavePolygon
+class ConcaveTriangle : public virtual PhysicsObject
 {
 public:
     ConcaveTriangle();

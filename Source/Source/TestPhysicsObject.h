@@ -14,7 +14,7 @@
 #include "PhysicsManager.h"
 
 
-class TestPhysicsObject: public virtual PhysicsObject, public virtual sf::ConvexShape
+class TestPhysicsObject: public virtual PhysicsObject
 {
 public:
     TestPhysicsObject();

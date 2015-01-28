@@ -37,6 +37,11 @@ bool GameObject::IsTopLevel() {
 	return (_parent == nullptr);
 }
 
+sf::Vector2f GameObject::getWorldPosition(){
+	return sf::Vector2f(0, 0);
+}
+
+
 //Virtual functions
 void GameObject::SetParent(GameObject* parent){
     _parent = parent;

@@ -18,6 +18,7 @@ public:
 	void Update(void);
     void EnableDebug(sf::RenderTarget* target);
     void DrawDebugData();
+	static b2Body* SeparateConcavePolygon(PhysicsObject& shapeOwner, b2BodyDef& bodyDef, b2FixtureDef& fixtureDef);
     static PhysicsBody* AddShape(PhysicsObject& shapeOwner);
 	// takes a ConcaveShape, splits it into multiple fixtures
 	// creates a body for the fixtures, and places the body in the world
