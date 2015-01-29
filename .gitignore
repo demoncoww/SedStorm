@@ -4,3 +4,4 @@ Temp/**
 Source/VS2013/**
 *.ilk
 *.pdb
+/Source/3rdParty/*.sln
