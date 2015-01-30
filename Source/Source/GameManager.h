@@ -34,6 +34,7 @@ private:
 	RenderManager* renderManager;
     GameObjectManager* gameObjectManager;
 	sf::RenderWindow* gameWindow;
+	float currentTime;
 public:
 	GameManager();
 	~GameManager();
@@ -41,5 +42,6 @@ public:
 	void InitInstance(void);
 	void MainLoop(void);
 	void Shutdown(void);
+	float getClock(void);
 };
 #endif // _GAMEMANAGER

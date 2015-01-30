@@ -6,14 +6,13 @@
 //  Copyright (c) 2015 Max Savage. All rights reserved.
 //
 
-#ifndef INPUTMANAGER_H
-#define INPUTMANAGER_H
 
-// SFML Includes
 #include <SFML/Joystick.hpp>
 
 
-class InputManager 
+class InputManager
 {
 	public
-		virtual void update();
+		isConnected();
+	virtual void update();
+}

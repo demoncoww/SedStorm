@@ -71,7 +71,6 @@ void GameManager::MainLoop()
 	sf::Clock clock; // create and start clock
 	sf::Event event;
 	float lastFrameTime = 0;
-	float currentTime;
 	float timeSinceLastUpdate = 0;
 	unsigned int frame = 0; // current frame
 
@@ -109,4 +108,9 @@ void GameManager::MainLoop()
 
 void GameManager::Shutdown()
 {
+}
+
+float GameManager::getClock()
+{
+	return currentTime;
 }
